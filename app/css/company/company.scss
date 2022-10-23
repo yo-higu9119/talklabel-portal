@@ -1,0 +1,153 @@
+@charset "utf-8" ;
+
+/* デフォルト */
+
+$breakpoints: (
+    "ssp" : "screen and (max-width:320px)",
+    "sp" : "screen and (max-width:540px)",
+    "tb" : "screen and (max-width:768px)",
+    "nb" : "screen and (max-width:1024px)",
+) !default;
+
+@mixin pc($breakpoint :nb){
+  @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+  }
+}
+
+@media screen and (min-width:541px){
+  .sp{display:none;}
+}
+@media screen and (max-width:540px){
+  .pc{display:none;}
+}
+
+@media screen and (min-width:769px){
+  .tb{display:none;}
+}
+@media screen and (max-width:768px){
+  .nb{display:none;}
+}
+
+// info
+
+.company{
+  &_info-block{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    p{
+      color: #333333;
+      font-size: 16px;
+      @include pc(sp){
+        font-size: 14px;
+      }
+    }
+    &_text{
+      padding-left: 40px;
+      width: 70%;
+      @include pc(sp){
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+.company-info {
+  width: 70%;
+  margin: 0 auto;
+  @include pc(sp){
+    width: 90%;
+  }
+}
+
+.established{
+  width: 68%;
+  @include pc(sp){
+    width: 66%;
+  }
+}
+
+// rule
+
+.company-rule{
+  width: 80%;
+  margin: 0 auto;
+  color: #333333;
+  h3{
+    margin-top: 50px;
+    color: #333333;
+  }
+  p{
+    @include pc(sp){
+      font-size: 14px;
+    }
+  }
+}
+
+.company-rule{
+  width: 80%;
+  margin: 0 auto;
+  color: #333333;
+  h3{
+    margin-top: 50px;
+    color: #333333;
+  }
+  p{
+    @include pc(sp){
+      font-size: 14px;
+    }
+  }
+}
+
+// law
+
+.company-law{
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #d9d9d9;
+  .law-block{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    border-top: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    @include pc(sp){
+      display: block;
+    }
+    &_title{
+      width: 30%;
+      margin-left: 40px;
+      @include pc(tb){
+        margin-left: 20px;
+        margin-right: 10px;
+      }
+      @include pc(sp){
+        width: 80%;
+        font-weight: bold;
+      }
+    }
+    &_text{
+      width: 70%;
+      padding-left: 40px;
+      padding-right: 20px;
+      border-left: 1px solid #d9d9d9;
+      @include pc(tb){
+        padding-left: 20px;
+      }
+      @include pc(sp){
+        border-left: none;
+        width: 85%;
+      }
+      p{
+        @include pc(sp){
+          margin-bottom: 0;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}

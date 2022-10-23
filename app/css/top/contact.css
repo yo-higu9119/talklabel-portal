@@ -1,0 +1,181 @@
+/*以下　樋口追加分*/
+
+.mgt10 .InputForm p.LayoutL{
+    float:none;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 26px;
+    padding-right: 31px;
+}
+.mgt10 .InputForm p.LayoutL span{
+  border-radius: 5px;
+}
+.mgt10,.mgt30{
+    margin-top: 0;
+}
+.InputForm p{
+    text-align: start;
+}
+.InputForm{
+    padding: 0px;
+}
+.InputForm dl{
+    display: flex;
+    align-items: baseline;
+}
+.InputForm dl li,
+dd p{
+    text-align: start;
+    color: #000;
+}
+input[type="checkbox"]{
+    position: relative;
+}
+.InputForm label.checkbox_text{
+    display: flex;
+    align-items: center;
+}
+.InputForm label.checkbox_text:before,
+.InputForm label.checkbox_text::after{
+    top: auto;
+}
+.InputForm label.checkbox_text::after{
+    margin-top: -4px;
+}
+
+.InputForm .CautTxtW{
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.InputForm .CautTxtW p{
+    color: #000;
+    text-align: center;
+}
+.ctaBox{
+    display: none;
+}
+.formThanks{
+    color: #000;
+}
+.qa-main{
+    display: none;
+}
+.comBox{
+    padding: 0;
+}
+h2.fotm_ti{
+    display: none;
+}
+.contact_Box{
+    text-align: start;
+    background-color: transparent;
+}
+.contact_Box.end{
+    border: none;
+}
+
+p.formThanksParagraph{
+    padding: 40px 0px;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 18px;
+}
+p.LayoutM{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 18px;
+}
+br.spOnly{
+    display: none;
+}
+
+@media screen and (max-width : 640px) {
+    .container {
+        width: calc(100% - 34px);
+    }
+    .mgt10 .InputForm p.LayoutL{
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 13px;
+    }
+    .mgt10 .InputForm p.LayoutL span{
+      font-size: 11px;
+      width: 20px;
+    }
+    .mgt10,.mgt30{
+        margin-top: 0;
+    }
+    .InputForm p{
+        text-align: start;
+    }
+    .InputForm{
+        padding: 0px;
+    }
+    .InputForm dl{
+        display: flex;
+        align-items: center;
+    }
+    .InputForm dl li,
+    dd p{
+        text-align: start;
+        color: #000;
+    }
+    .InputForm dt{
+        padding-bottom: 0px;
+    }
+    .InputForm dd{
+        width: 175%;
+    }
+    input[type="checkbox"]{
+        position: relative;
+    }
+    .InputForm label.checkbox_text{
+        display: flex;
+        align-items: center;
+    }
+    
+    .InputForm .CautTxtW{
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+    .InputForm .CautTxtW p{
+        color: #000;
+        text-align: center;
+    }
+    .ctaBox{
+        display: none;
+    }
+    .formThanks{
+        color: #000;
+    }
+    .qa-main{
+        display: none;
+    }
+    input.txt, select.txt{
+        font-size: 13px;
+    }
+    .contact_Box{
+        width: 100%;
+    }
+    .checkbox_text{
+        font-size: 13px;
+    }
+    .checkbox_text a{
+        display: contents;
+    }
+
+    p.formThanksParagraph{
+        padding: 20px 0px;
+        font-size: 13px;
+    }
+    p.formThanksParagraph{
+        width: auto;
+        font-size: 14px;
+    }
+    br.spOnly{
+        display: inline;
+    }
+    
+}

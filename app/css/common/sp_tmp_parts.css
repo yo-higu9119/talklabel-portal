@@ -1,0 +1,1324 @@
+@charset "utf-8";
+/***************************************************
+information
+  filename : tmp_parts.css;
+***************************************************/
+
+/****************** 幅指定 ******************/
+/* ベースレイアウト */
+body.sp_prev {width: 417px;}
+#header {width: 100%;}
+#headerSub,
+#footerSub,
+#footer {width: 100%;}
+.popup .mainOCln {width: 90%;}
+
+/* インナー */
+.header_innT,
+.header_innM,
+.header_innU,
+.header_innST,
+.footer_innT,
+.footer_innM,
+.footer_innU,
+.footer_innST {width: 100%;} /* 基本幅 */
+
+/* ヘッダーサブ枠 */
+.headerSub_innT,
+.headerSub_innM,
+.headerSub_innTL,
+.headerSub_innML,
+.headerSub_innTR,
+.headerSub_innMR,
+.headerSub_innTM,
+.headerSub_innMM {width: 100%;}
+
+/* フッターサブ枠 */
+.footerSub_innTL,
+.footerSub_innML,
+.footerSub_innTR,
+.footerSub_innMR {width: 100%;}
+
+.footerSub_innT,
+.footerSub_innM,
+.footerSub_innTM,
+.footerSub_innMM {width: 100%;}
+
+/* 基本幅 */
+.contentsInn {width: 100%;}
+.mainInn {width: 100%;}
+.mainInnS {width: 100%;} /* コンテンツ基本幅 */
+
+/* 2カラム(幅広) */
+.mainClnD {width: 100%;} /* コンテンツ基本幅 */
+.sideClnD {width: 100%;} /* 2カラムサイド幅 */
+
+/* 2カラム(幅狭) */
+.mainClnS {width: 100%;} /* コンテンツ基本幅(広) */
+.sideClnS {width: 100%;} /* 2カラムサイド幅(広) */
+
+/* 2カラム(セパレート) */
+.hlfCln {width: 100%;}/* 2カラム(等幅) */
+
+/* ポップアップ */
+.popup_Box {width: 100%;}
+
+/* パンくずリンク */
+.pan_link ul {width: 100%;}
+
+/* 記事横移動ナビ */
+.NBLink {width: 90%;}
+
+/* コンテンツエリア */
+.contents_list {width: 95%;}
+.contents_detaile {width: 100%;}
+
+/* SNSシェア設置 */
+#SNSboxArea {width: 100%;}
+.shareList {width: 100%;}
+
+/* カテゴリ表記設置 */
+ul.DetcateName {width: 95%;}
+
+/* 閲覧数・コメント・いいね数・日付表示 */
+.rank_date_c_area {width: 95%;}
+
+/* 記事投稿者 */
+.authorBox {width: 95%;}
+
+/* コメント・掲示板要素 */
+.commentBox {width: 95%;}
+
+/* マイページ枠 */
+.mypage,
+.mypage_Box {width: 95%;}
+
+/* お問会わせ枠 */
+.contact_Box {width: 95%;}
+
+/* 購入枠 */
+.order_Box {width: 95%;}
+
+/****************** マージン・パディング指定 ******************/
+/* ベースレイアウト */
+.spHeadNavi #contents {margin: 50px auto 0 auto;} /* ヘッダーの高さに合わせて調整してください */
+.spFootNavi #contents {margin: 0 auto;} /* ヘッダーの高さに合わせて調整してください */
+.popup #contents {margin: 0 auto;}
+
+/* 2カラム(セパレート) */
+.hlfCln {margin: 0px auto 30px auto;}/* 2カラム(等幅) */
+.mainClnD,
+.sideClnD {margin: 0;}/* 2カラム(幅広) */
+.mainClnS,
+.sideClnS {margin: 0;}/* 2カラム(幅狭) */
+
+/* 枠ボックス */
+.comBox {padding: 5px;}
+.comBoxInn {padding: 10px;}
+
+/* コンテンツエリア */
+.contents_list,
+.contents_detaile {padding: 20px 0;}
+
+/* ポップアップ */
+.popup_Box {padding: 20px 10px;}
+
+/* SNSシェア設置 */
+.shareList {padding: 0 10px 20px 10px;}
+
+/****************** フォントサイズ指定 ******************/
+
+#footer .fnavi ul {font-size: 3.2vw;}/* フッターナビ */
+.pagetop a {font-size: 2.8vw;}/* ページトップボタン */
+.pan_link li {font-size: 2.8vw;}/* パンくずリンク */
+.PageNum_link a {font-size: 4.8vw;font-weight: bold;}/* ページナンバーナビ */
+
+/****************** 個別指定 ******************/
+
+/*** 基本レイアウト ***/
+
+/* ベースレイアウト */
+#wrapper {overflow: hidden;}
+
+/* ヘッダー */
+#header p.logo {padding: 5px 10px;max-width: 250px;}/* ヘッダーロゴ */
+#header .gnavis {float: left;margin-top: 8px;}
+
+/* フッター */
+#footer .fnavi{float: left;margin: 0 auto;padding: 0 10px;}/* フッターナビ */
+#footer .copy {font-size: 2.8vw;font-weight:normal;}/* コピーライト */
+
+/* アコーディオンメニュー */
+.widget li a {
+	font-size: 4.0vw;
+	font-weight: bold;
+}
+
+/* カテゴリナビスライダー */
+.catenavSl li {min-width: 120px;}
+.catenavSl li a {font-size: 3.6vw;font-weight: bold;}
+
+/* カテゴリナビ横 */
+.catenavY {width: 95%;margin: 0 auto;}
+.catenavY li {min-width: 33.3%;}
+.catenavY li a {font-size: 3.6vw;font-weight: bold;padding: 5px 0;}
+
+/* 表示形式選択 */
+.listIncSelect {width: 98%;}
+.listIncSelect li a {
+	width: 100px;
+	padding: 5px 5px 5px 25px;
+	font-size: 3.4vw;
+	font-weight: bold;
+}
+.listIncSelect li.thumli a,
+.listIncSelect li.txtli a,
+.listIncSelect li.thumli.crt a,
+.listIncSelect li.thumli a:hover,
+.listIncSelect li.txtli.crt a,
+.listIncSelect li.txtli a:hover {background-size:18px 18px;}
+
+/* スマホ要固定ナビ要素 */
+#spheader {position: fixed;top: 0px;left: 0px;z-index: 1000;box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2);}/* ヘッダー固定 */
+#spheader {width: 100%;height: 50px;}
+#spheader p.logo {padding: 5px 10px;max-width: 200px;}/* ヘッダーロゴ */
+#spfooter {position: fixed;bottom: 0px;left: 0px;z-index: 1000;box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, .2);}/* フッター固定 */
+#spfooter {width: 100%;height: 100px;}
+#spfooter p.logo {margin: 0 auto;padding: 68px 0 0 0;max-width: 130px;text-align: center;}
+#spheader {background: var(--app-header-cr);}
+#spfooter {background: var(--app-footer-cr);}
+#spheader li,
+#spfooter li {list-style: none;}
+.sphead{position:relative;}
+
+/* ドロワメニュー(ボタン) */
+.drbtn{width:50px;height:45px;}
+#spheader .drbtn{top: 2px;right: 5px;}
+#spfooter .drbtn{bottom: 46px;right: 2%;}
+.drbtn.action {right:2px;}
+
+.hambarg{height:2px;width:30px;}
+.hambargMenu {font-size:2.8vw;font-weight: bold;}
+#spheader .hambargMenu {padding-top: 10px;}/* ヘッダー固定 */
+#spfooter .hambargMenu {padding-top: 15px;}/* フッター固定 */
+
+/* ドロワメニュー(枠) */
+.drawer{
+	width:300px;
+	height:100%;
+	padding: 10px 0px 100px 0px;
+	-webkit-transform:translateX(300px);
+	transform:translateX(300px);
+	right:0;
+}
+.modal-search{
+	width:100%;
+	height:100%;
+	padding: 10px 20px;
+	-webkit-transform: translate(-100%, 0);
+	transform: translate(-100%, 0);
+	left: 0;
+}
+.drawer.action{width:90%;}
+.spHeadNavi .drawer,
+.spHeadNavi .modal-search {top:50px;}
+.spFootNavi .drawer {bottom:100px;padding-top: 100px;}
+.spFootNavi .modal-search {bottom:100px;padding-top: 130px;}
+
+/* ヘッダー固定ナビ */
+#spheaderMenu {margin: 0 auto;padding: 0;}
+.spheaderNaviIco.NaviIco01,
+.spheaderNaviIco.NaviIco02 {
+	position:absolute;
+	top: 8px;
+	width:60px;
+	height:45px;
+	text-align: center;
+}
+.spheaderNaviIco .sppheaderNaviImg {margin: 0;padding: 0;}
+.spheaderNaviIco .sppheaderNaviImg .NaviIcoSvg {width: 30px;height: 30px;fill: #000;}
+.spheaderNaviIco.NaviIco01 {right: 13%;}
+.spheaderNaviIco.NaviIco02 {right: 24%;}
+
+/* フッター固定ナビ */
+#spfooter {z-index: 10000;}
+#spfooterMenu {margin: 0 auto;padding: 0;}
+.spfooterNaviIco.NaviIco01,
+.spfooterNaviIco.NaviIco02,
+.spfooterNaviIco.NaviIco03,
+.spfooterNaviIco.NaviIcoCent {
+	position:absolute;
+	bottom: 45px;
+	width:60px;
+	height:45px;
+	text-align: center;
+}
+.spfooterNaviIco .spfooterNaviImg {margin: 0;padding: 0;}
+.spfooterNaviIco .spfooterNaviImg .NaviIcoSvg {width: 30px;height: 30px;fill: #000;}
+.spfooterNaviIco .spfooterNaviTxt {font-size:2.8vw;margin-top: 0;padding-top: 0;font-weight: bold;line-height: 1.0;}
+.spfooterNaviIco.NaviIco01 {left: 2%;}
+.spfooterNaviIco.NaviIco02 {left: 22%;}
+.spfooterNaviIco.NaviIco03 {right: 22%;}
+.spfooterNaviIco.NaviIcoCent {left: 0;right: 0;margin: auto;}
+
+/****************** リスト ******************/
+
+/* リスト一覧(共通) */
+.ListType1 {
+	width: 95%;
+	margin: 0 auto;
+	padding: 0;
+}
+.ListType2,
+.ListType4 {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+.ListBox .column {
+	width: 100%;
+	padding: 0;
+}
+/* リスト画像 */
+.ListType1 .tpl-flexcolumn2 figure.image {height: 110px;}
+.ListType2 .tpl-flexcolumn2 figure.image,
+.ListType4 .tpl-flexcolumn2 figure.image {height: 110px;}
+.ListType2 .tpl-flexcolumn3 figure.image,
+.ListType4 .tpl-flexcolumn3 figure.image {height: 60px;}
+.ListType2 .column .tpl-contents-block-inn-image,
+.ListType4 .column .tpl-contents-block-inn-image {padding: 0 10px;}
+
+/* リストタイトル */
+.ListType1 .column h3 {font-size: 5.2vw;height: 52px;}
+.ListType1 .tpl-flexcolumn2 .column h3 {font-size: 4.8vw;height: 48px;}
+
+.ListType2 .column h3,
+.ListType4 .column h3 {padding: 0 10px 5px 0;font-size: 4.8vw;}
+
+/* リストディスクリプション */
+.ListBox.ListType1 .distxt {
+	font-size: 3.8vw;
+}
+.ListBox.ListType1 .tpl-flexcolumn2 .distxt {
+	height: 80px;
+}
+.ListType2 .column .distxt,
+.ListType4 .column .distxt {font-size: 3.8vw;padding: 5px 15px 0 0;}
+
+/* リスト・詳細ビュー数等アイコン */
+.ListBox .rank_date_area {padding: 5px 10px 5px 0;}
+.ListBox .column p.view,
+.ListBox .column p.like,
+.ListBox .column p.comment,
+.rank_date_c_area p.view,
+.rank_date_c_area p.like,
+.rank_date_c_area p.comment {font-size: 3.0vw;}
+.ListBox .column p.cap,
+.rank_date_c_area p.cap {font-size: 3.2vw;}
+
+/* リスト記事投稿者 */
+.ListBox .column .person .person_ph .name {font-size: 4.0vw;}
+.ListBox .column .person .person_ph .work {font-size: 3.2vw;}
+.ListBox .column .person .prof {padding: 5px 10px 0 0;font-size: 3.2vw;}
+
+.ListBox .column .person .person_ph figure {width: 15%;}
+.ListBox .column .person .person_ph .name_area {width: 85%;}
+
+/* リストタグ・リストカテゴリアイコン・リストランキング */
+.ListBox .column .tagLink a,
+.ListBox .column ul.cateName span.cateIco,
+.ListBox.ListType3 ul.cateName span.cateIco,
+.ListBox .column .rankIco {font-size: 3.0vw;}
+
+/* 1行リスト */
+.ListType3 dt.time {font-size: 3.2vw;}
+.ListType3 dd.title_area p.title {font-size: 5.8vw;}
+.ListType3 dd.title_area p.txt {font-size: 4.2vw;}
+
+/* 個別項目一覧概要 */
+.ListSubhDet dl {font-size: 3.2vw;font-weight: bold;}
+.ListSubhDet dl span.kinagakuTxt {font-size: 4.6vw;font-weight: bold;padding: 0 5px;}
+.ListSubhDet dt {width: 30%;max-width: 100px;}
+.ListSubhDet dd {width: 70%;padding: 2px 0 2px 20px;}
+
+/****************** コメント・掲示板要素 ******************/
+
+/* 掲示板トップ一覧 */
+.board_Box {width: 100%;}
+.board {width: 95%;margin: 0 auto;}
+
+/* 記事コメント/掲示板共通 */
+.commentBox {
+	margin: 10px auto;
+	padding: 5px 10px;
+	border-top: 1px solid var(--app-main-brd);
+	border-bottom: 1px solid var(--app-main-brd);
+}
+/* トピックス新規登録フォーム */
+.NewTpiInput {
+	margin: 20px auto;
+	padding: 10px;
+}
+
+.commentBT {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+.commentList {padding: 10px 5px 20px 5px;}
+.commentSec {margin: 10px 0 0 20px;}
+
+.commentPh {}
+.commentNameInn {width: 80%;}
+.commentName {
+	font-size: 4.2vw;
+	font-weight: normal;
+}
+.commentName span.commentNameS {
+	padding: 0;
+	font-size: 3.6vw;
+	font-weight: normal;
+}
+.commentTime {
+	font-size: 3.6vw;
+	font-weight: normal;
+}
+.commentTxtRes {
+	font-size: 4.2vw;
+	line-height: 1.8;
+}
+.commentTxt {
+	font-size: 4.2vw;
+	line-height: 1.8;
+}
+.commentResArea {padding: 20px 0 5px 0;}
+.board_topicsBox .commentResR {float: right;padding-top: 10px;}
+
+/*** 掲示板トップ一覧 ***/
+.boardList {margin: 0 auto;padding: 10px 0 40px 0;}
+
+/* 掲示板(トピックス) */
+.boardListLink {
+	margin: 10px auto;
+	padding: 10px;
+}
+.boardListProf h2 {
+	width: 80%;
+	padding: 0 0 0 20px;
+	font-size: 5.2vw;
+	line-height: 1.4;
+}
+.boardListDet {padding: 0;}
+.boardListBt {padding: 20px 0 0 0;}
+.boardListName {text-align: left;padding: 10px 5px;}
+.boardTopicsTime {padding: 5px 0 0 0;font-size: 3.8vw;}
+.boardTopicsName {padding: 0;font-size: 4.2vw;}
+.boardNameS {padding: 0 0 0 10px;font-size: 3.2vw;}
+.board_topicsBox h1 {font-size: 6.5vw;line-height: 1.4em;}
+
+/****************** ログイン・新規会員登録要素 ******************/
+
+/* ログイン情報 */
+.member_info,
+.member_info_pd {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	border-top: 1px solid var(--app-main-brd);
+	border-bottom: 1px solid var(--app-main-brd);
+	border-left: none;
+	border-right: none;
+}
+
+/* ログイン情報(プルダウン型) */
+
+.member_info_pd_menu li a{font-size: 4.0vw;}
+
+.member_info .member_info_thumbnail,
+.member_info_pd .member_info_thumbnail {width: 35px;height: 35px;}
+.member_info_txt,
+.member_info_pd_txt {margin-left: 10px;line-height: 1.0;}
+.member_info_txt {width: 245px;}
+.member_info_txt .LoginName,
+.member_info_pd_txt .LoginName {font-size: 4.6vw;line-height: 1.6;}
+.member_info_txt .LoginCourse,
+.member_info_pd_txt .LoginCourse {font-size: 3.4vw;}
+
+/*FMCアイコン*/
+.fmcicon:hover #fmctxt {font-size: 3.4vw;}
+
+/****************** 入力フォーム箇所 ******************/
+
+/* フォーム縦並び */
+.InputFormT dt {font-size: 16px;font-weight:bold;}
+
+/* ステップ */
+.step_flow ul {width: 100%;}
+.step_flow p.flow_ti {font-size: 4.2vw;font-weight:bold;}
+.step_flow p.flow_com {display: none;}
+
+/*** 入力フォーム項目 ***/
+.InputForm dt {font-size: 16px;font-weight:bold;padding: 0 0 10px 0;}
+.InputForm dt {width: 100%;}
+.InputForm dd {width: 100%;}
+
+/****************** マイページ要素 ******************/
+
+/* マイページ枠 */
+.mypage_Box {padding: 0;}
+
+/* マイページ(基本) */
+.mypageDet {padding: 5px 10px;}
+.mypageDet dl {font-size: 4.2vw;}
+.mypageDet dt {float:left;width:140px;}
+.mypageDet dd {float:left;}
+
+/* ファイルアップロード */
+.FileUpImg {margin: 0;}
+.FileUpImg img {width:150px;}
+.FileUpName {font-size: 12px;}
+
+/* マイページ(プロフ写真エリア) */
+.myPhoto .photoArea {
+	width: 180px;
+	height: 180px;
+}
+.myPhoto p.myName {font-size: 4.6vw;}
+
+/* マイページナビ */
+.mypagenav {margin: 0 auto;}
+.mypagenav ul {padding: 0 5px;}
+.mypagenav li {
+	width: 49%;
+	display: inline-block;
+	margin: 0 auto 5px auto;
+	font-size: 3.8vw;
+	border: 1px solid  var(--app-main-brd);
+	background: #fff;
+}
+.mypagenav a {width: 100%;padding: 5px 0 5px 23px;font-weight: bold;}
+
+/* マイページ各種購入表示 */
+.ordDetBox table {font-size: 4.6vw;}
+
+.ordDetBox .ordDetTiArea {padding: 10px;}
+.ordDetBox .ordDetTi {
+	padding: 0 0 10px 0;
+	font-weight: bold;
+}
+.ordDetBox .ordDetTi dt {
+	font-size: 3.8vw;
+	padding: 0;
+}
+.ordDetBox .ordDetTi dd {
+	font-size: 4.6vw;
+}
+.ordDetBox .ordDetBt {}
+.ordDetBox .ordDetBt dd {
+	float: left;
+	width: 100px;
+	padding: 0 2px;
+}
+/* マイページ投稿履歴等 */
+.mypageInn {
+	margin: 0 auto 20px auto;
+	padding: 0 10px;
+}
+
+/****************** セミナー要素 ******************/
+
+/* セミナー詳細一覧 */
+.ListSubhDet span.SemIco {font-size:3.4vw;}
+.ListSubhDet .sem_kinagaku dt {padding-top: 5px;}
+
+/* セミナーカレンダー用 */
+.SchCal {width: 95%;}
+.mypage_Box .SchCal {width: 100%;padding-bottom: 30px;}
+.SchCal p.SchCalBt {padding: 3px 0;}
+.SchCal p.SchCalIco {
+	float: left;
+	width: 120px;
+	padding: 10px 0;
+}
+.SchCal p.SchCalTi {
+	font-size: 4.6vw;
+	line-height: 1.6;
+	padding: 0 0 10px 0;
+	border-bottom: 1px dotted var(--app-main-brd);
+}
+.SchCal p.SchCalDay {
+	font-size: 3.8vw;
+	line-height: 1.4;
+	padding: 5px;
+	border-bottom: 1px dotted var(--app-main-brd);
+}
+.SchCal p.SchCalPlc {
+	font-size: 3.8vw;
+	line-height: 1.4;
+	padding: 5px;
+	border-bottom: 1px dotted var(--app-main-brd);
+}
+.SchCal p.SchCalCst {
+	font-size: 4.6vw;
+	line-height: 1.4;
+	padding: 5px 0;
+}
+
+/* セミナー申込ボタン */
+.SemBTBox {
+	width: 95%;
+	margin: 20px auto;
+	padding: 10px;
+}
+.SemBTBox .btCart {margin: 20px auto;}
+
+/* セミナー基本詳細 */
+.SemDLBox {
+	width: 95%;
+	margin: 10px auto;
+	padding: 10px;
+	font-size:4.2vw;
+}
+.SemDLBox dl {margin: 0 auto;padding: 0;}
+.SemDLBox dt {float:left;width:30%;margin: 0;padding: 10px;}
+.SemDLBox dd {float:left;width:70%;margin: 0;padding: 10px;}
+.SemDLBox .DetDlName dt,
+.SemDLBox .DetDlPay dt {padding-top: 10px;}
+.SemDLBox .DetDlName dd {font-size: 5.8vw;font-weight: bold;line-height: 1.2;}
+.SemDLBox .DetDlPay span.kinagakuTxt {font-size: 5.8vw;font-weight: bold;padding: 0 5px 0 0;}
+
+/* セミナー自由詳細 */
+.SemFLBox {
+	width: 95%;
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 4.2vw;
+}
+.SemFLBox dl {margin: 0 auto;padding: 0;}
+.SemFLBox dt {float:left;width:30%;margin: 0;padding: 10px;}
+.SemFLBox dd {float:left;width:70%;margin: 0;padding: 10px;}
+
+/* セミナーURL詳細 */
+.SemURLBox {
+	width: 95%;
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 4.2vw;
+}
+.SemURLBox dl {margin: 0 auto;padding: 0;}
+.SemURLBox dt {float:left;width:30%;margin: 0;padding: 10px;}
+.SemURLBox dd {float:left;width:70%;margin: 0;padding: 10px;}
+
+/****************** 商品要素 ******************/
+
+/* 商品一覧概要 */
+.ListSubhDet .prd_kinagaku dt {padding-top: 5px;}
+.ListSubhDet .prd_kinagaku dt {width: 30%;max-width: 100px;}
+.ListSubhDet .prd_kinagaku dd {width: 70%;padding: 2px 0;}
+
+/* 商品カートボタン */
+.PrdBTBox {
+	width: 95%;
+	margin: 20px auto;
+	padding: 10px;
+}
+.PrdBTBox .btCart {margin: 20px auto;}
+.PrdNumBox {
+	width: 100%;
+	margin: 5px auto;
+	padding: 5px;
+	font-size: 4.2vw;
+}
+.PrdNumBox .PrdNumTi {padding: 12px 5px;}
+.PrdNumBox .PrdNumTxt {padding: 12px 10px;}
+.PrdNumBox .PrdNum {padding: 0;}
+.PrdNumBox .PrdNumCtrBt {padding-top: 12px;}
+.PrdNumBox .PrdNumUpdBt {padding: 10px 2px;}
+.PrdNumBox .PrdNumOpTi {max-width :110px;padding: 5px 5px 5px 0;text-align: right;font-size: 3.8vw;}
+
+.PrdCartOpArea {margin: 0 auto;padding: 5px;}
+.PrdCartOpCrt {margin: 0 auto;padding: 0;}
+.PrdCartOpNum {padding: 0 5px;}
+.PrdCartOpBt {padding: 10px 0;}
+.PrdCartOpKBt {padding: 5px 0;}
+
+.PrdNumBox .PrdNumCtrBt button {
+	font-size: 3.8vw;
+	font-weight: bold;
+	margin: 0 2px;
+	padding: 5px 10px;
+}
+
+/* 商品基本詳細 */
+.PrdDLBox {
+	width: 95%;
+	margin: 10px auto;
+	padding: 10px;
+	font-size:4.2vw;
+}
+.PrdDLBox dl {margin: 0 auto;padding: 0;}
+.PrdDLBox dt {float:left;width:30%;margin: 0;padding: 10px;}
+.PrdDLBox dd {float:left;width:70%;margin: 0;padding: 10px;}
+.PrdDLBox .DetDlName dt,
+.PrdDLBox .DetDlPay dt {padding-top: 10px;}
+.PrdDLBox .DetDlName dd {font-size: 5.8vw;font-weight: bold;}
+.PrdDLBox .DetDlPay span.kinagakuTxt {font-size: 5.8vw;font-weight: bold;padding: 0 5px 0 0;}
+
+/* 商品自由詳細 */
+.PrdFLBox {
+	width: 95%;
+	margin: 10px auto;
+	padding: 10px;
+	font-size:10px;
+	font-size:4.2vw;
+}
+.PrdFLBox dl {margin: 0 auto;padding: 0;}
+.PrdFLBox dt {float:left;width:30%;margin: 0;padding: 10px;}
+.PrdFLBox dd {float:left;width:70%;margin: 0;padding: 10px;}
+
+/* 商品URL詳細 */
+.PrdURLBox {
+	width: 95%;
+	margin: 10px auto;
+	padding: 10px;
+	font-size:4.2vw;
+}
+.PrdURLBox dl {margin: 0 auto;padding: 0;}
+.PrdURLBox dt {float:left;width:30%;margin: 0;padding: 10px;}
+.PrdURLBox dd {float:left;width:70%;margin: 0;padding: 10px;}
+
+/****************** カート要素 ******************/
+
+/* 一括オーダー */
+.cart_Box {width: 100%;}
+.PrdCartList {width: 95%;margin: 0 auto;}
+.PrdCartInt {
+	width: 100%;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 200px;
+	z-index: 9990;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	background: #fff;
+	border-top: 2px solid #000;
+}
+#cartList {position: -webkit-sticky;position: sticky;top: 80px;}
+
+/* 商品カート(商品一覧) */
+.PrdCartListBox {margin: 10px auto;padding: 0;}
+
+.PrdCartPh {width: 25%;margin: 0;padding: 0;}
+.PrdCartDet {width: 45%;margin: 0 5px;padding: 0;}
+.PrdCartBt {width: 22%;margin: 0;padding: 0;}
+
+.PrdCartDetName {margin: 0;padding: 0;}
+.PrdCartDetAmt {margin: 0;padding: 0;}
+
+.PrdCartPh .PrdCartPhDet {
+	width: 100%;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+}
+.PrdCartPh img {width: 100%;}
+.PrdCartPh .PrdCartPhDet {
+	height: 60px;
+	overflow: hidden;
+	background: #eee;
+}
+.PrdCartDet {font-weight: bold;}
+.PrdCrtNo {font-size: 3.2vw;}
+.PrdCrtName {font-size: 4.2vw;}
+
+.PrdCartBt {padding-top: 0;}
+.PrdCartDetAmt {padding-top: 2px;font-size: 3.4vw;}
+.PrdCartDetAmt span.kingakuTxt {font-size: 4.8vw;padding: 0 5px;}
+
+/* 商品カート(カート) */
+.PrdCrtSNo {font-size: 3.2vw;}
+.PrdCrtSName {font-size: 4.2vw;}
+.PrdCartSAmt,
+.PrdCartSAmtOp {font-size: 3.2vw;text-align: right;font-weight: bold;}
+.PrdCartSAmt span.kingakuTxt {font-size: 5.8vw;padding: 0 5px;}
+
+/* 商品購入に関するボタン一式 */
+.PrdCartBt .PrdCrtEdBt a {
+	width: 100%;
+	margin: 0 2px 5px 2px;
+	padding: 5px 0px;
+	font-size:3.6vw;
+}
+.PrdNumUpdBt a {
+	width: 50px;
+	padding: 5px 0px;
+	font-size:3.6vw;
+}
+.PrdNumCtrBt button {font-size:3.6vw;}
+
+/* カート内合計金額 */
+.PrdCartTotalBox td.PrdCartTotalTiSd {font-size: 4.0vw;}/* タイトル */
+.PrdCartTotalBox td.PrdCartTotalpay {font-size: 5.8vw;}/* 合計金額 */
+.PrdCartTotalBox td.PrdCartTotalpay span {font-size: 4.8vw;}/* 合計金額小 */
+.PrdCartTotalBox td.PrdCartTotalTiS,
+.PrdCartTotalBox td.PrdCartTotalSpay {font-size: 3.8vw;}/* 消費税 */
+.PrdCartTotalBox td.PrdCartTotalpayS {font-size: 4.8vw;}/* 配送料 */
+
+/* カート出現ボタン */
+.cartOpenBt button {
+	width: 100%;
+	margin: 5px auto;
+	padding: 10px 0px;
+	font-size:4.0vw;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd-a);
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+}
+.spCrtBt {padding-bottom: 50px;}
+.spFootNavi .spCrtBt {padding-bottom: 130px;}
+
+/* 住所選択 */
+.addArea .addAreaInn {
+	width: 100%;
+	height: 210px;
+	margin: 5px auto;
+}
+.addArea .addAreaInn .addDetail {padding: 5px;font-size: 4.0vw;}
+.addArea .addAreaInn .addName {padding: 0 0 5px 0;font-size: 5.2vw;}
+.addArea .addAreaInn .addPost {padding: 5px 0 0 0;}
+.addArea .addAreaInn .addAddition {width: 100%;height: 150px;margin: 0;padding: 10px;}
+.addArea .addAreaInn .addAddition p.addAdditionTi {padding-top: 15px;text-align: center;font-size: 4.6vw;font-weight: bold;}
+.addArea .addAreaInn .addAddition p.addAdditionIco {padding-top: 15px;text-align: center;font-size: 40px;font-weight: bold;}
+
+.addArea .addAreaInn .radio-toggle.addSelect {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+.addArea .addBTArea {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+.addBT {float: left;}
+.addBT a {
+	width: 100px;
+	margin: 0 5px 0 0;
+	padding: 5px 0px;
+	font-size:4.2vw;
+}
+
+/****************** 最終確認要素 ******************/
+
+/* 申込・購入フォーム最終確認 */
+.FChkBox {
+	width: 100%;
+	margin: 10px auto;
+	padding: 5px;
+	font-size:4.2vw;
+}
+.FChkBox dl {margin: 0 auto;padding: 0;}
+.FChkBox dt {float:left;width:30%;margin: 0;padding: 10px;}
+.FChkBox dd {float:left;width:70%;margin: 0;padding: 10px;}
+.FChkBox .PrdCartSAmt span.kingakuTxt {font-size: 4.6vw;}
+.FChkBox .PrdCartSAmtOp span.kingakuTxt {font-size: 4.0vw;}
+
+/****************** スライドショー ******************/
+
+/*** スライドショー(画面サイズ最大) ***/
+.slideshow_area {height: 300px;}
+.slideshow_box {width: 800px;}
+
+/*** スライドショー(シングル) ボタン要素 ***/
+.slide_single_box .slick-prev {left: 10px;}
+.slide_single_box .slick-next {right: 20px;}
+.slide_single_box .slick-prev::before,
+.slide_single_box .slick-next::before {font-size: 30px;color: #000;}
+
+/* スライドショー(1画像スライド表示) */
+.slideDf_area {margin: 10px auto;padding: 0 0 15px;border-bottom: 1px solid var(--app-main-brd);}
+.slideDfInn {padding: 0 20px;}
+.slideDfInn h2 {
+	margin: 5px auto;
+	padding: 10px 0;
+	font-size: 5.2vw;
+	line-height: 1.2em;
+	overflow: hidden;
+}
+.slideDfInn p.cap {
+	width: 100%
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 3.2vw;
+	font-weight: bold;
+	line-height: 1.2em;
+	text-align: right;
+	border-top: 1px solid var(--app-main-brd);
+}
+/* スライドショー(3画像スライド複数表示) */
+.slideDfN_area {margin: 0 auto 45px auto;padding: 0;}
+.slideDfN_box .slick-dots li button:before {color: #fff;}
+.slideDfN_box li.slick-active button:before {color: #fff;}
+
+/****************** 個別パーツ ******************/
+
+/*** 個人メニュー表示エリア ***/
+/* 共通 */
+.memberArea {padding-top: 5px;}
+.mnavi {padding-bottom: 5px;}
+.mnavi li {list-style: none;}
+.mnavi a {
+	display: block;
+	padding: 10px 0;
+	font-size: 4.0vw;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 2px;
+	color: #000;
+	border: 1px solid #666;
+	filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
+}
+.member_info, .member_info_pd {margin-top: 15px;margin-bottom: 5px;}
+
+/* プッシュ通知ボタン */
+ul.pwa_pushBt li a{font-size: 3.8vw;}
+
+/* タイプ01 */
+.memberAraType01 {width: 100%;}
+.memberAraType01 .mnavi ul {margin: 0 auto;}
+.memberAraType01 .mnavi ul.mnaviInn {width: 98%;margin: 10px auto 5px auto;}
+.memberAraType01 .mnavi ul.mnaviInn li {width: 49%;display: inline-block;margin-bottom: 5px;}
+.memberAraType01 .mnavi ul.mnaviInn a {width: 100%;}
+.memberAraType01 .mnavi ul.ptInn {width: 98%;margin: 0 auto;}
+.memberAraType01 .mnavi ul.ptInn li {width: 49%;display: inline-block;}
+.memberAraType01 .mnavi ul.ptInn a {
+	width: 100%;
+	height: 75px;
+	margin: 3px 0;
+}
+.memberAraType01 .mem_login a,
+.memberAraType01 .new_reg a,
+.memberAraType01 .mem_mypage a,
+.memberAraType01 .mem_logout a {background: #fff;}
+.memberAraType01 .cart_bt a {background: url(../../core_sys/common/images/sys/cart_ico.png) center 8px no-repeat #fff;}
+.memberAraType01 .search_bt a {background: url(../../core_sys/common/images/sys/search_ico.png) center 8px no-repeat #fff;}
+.memberAraType01 .contact_bt a {background: url(../../core_sys/common/images/sys/mail_ico.png) center 8px no-repeat #fff;}
+.memberAraType01 .cart_bt a span,
+.memberAraType01 .search_bt a span,
+.memberAraType01 .contact_bt a span {display: block;padding-top: 32px;}
+
+/* タイプ02 */
+.memberAraType02 .mnavi ul.mnaviInn {width: 98%;margin: 5px auto;}
+.memberAraType02 .mnavi li {width: 49%;display: inline-block;}
+.memberAraType02 .mnavi a {width: 100%;}
+
+.memberAraType02 .mem_login a,
+.memberAraType02 .new_reg a,
+.memberAraType02 .mem_mypage a,
+.memberAraType02 .mem_logout a,
+.memberAraType02 .cart_bt a,
+.memberAraType02 .search_bt a,
+.memberAraType02 .contact_bt a {background: #fff;}
+
+/* タイプ03 */
+.memberAraType03 .mnavi ul.mnaviInn {width: 98%;margin: 5px auto;}
+.memberAraType03 .mnavi li {width: 32%;display: inline-block;}
+.memberAraType03 .mnavi a {width: 100%;}
+
+.memberAraType03 .mem_login a,
+.memberAraType03 .new_reg a,
+.memberAraType03 .mem_mypage a,
+.memberAraType03 .mem_logout a,
+.memberAraType03 .cart_bt a,
+.memberAraType03 .search_bt a,
+.memberAraType03 .contact_bt a {background: #fff;}
+
+/* アドレス指定 */
+address p.logo {max-width: 150px;}
+address p.name {font-size: 4.6vw;padding: 5px 0;}
+address p.add {font-size: 3.8vw;padding: 5px 0;line-height: 1.4em;}
+address p.tel {font-size: 4.0vw;}
+address p.mail {font-size: 3.8vw;}
+address p.txt {font-size: 3.8vw;}
+address p.cap {font-size: 3.8vw;padding: 5px 0;}
+
+address p.contactBt a {
+	font-size: 4.2vw;
+	color: var(--app-main-txt);
+	text-decoration: none;
+	border: 1px solid var(--app-main-brd-u);
+}
+
+/* カテゴリ表記設置 */
+ul.DetcateName span.DetcateIco {font-size: 3.0vw;}
+
+/* いいねボタン設置 */
+.siteShare a,
+.siteShare span,
+.siteFavorite a,
+.siteFavorite span,
+.BrdSiteShare span,
+.BrdSiteRes span,
+.BrdSiteAcs span,
+.siteShareNo {font-size: 3.2vw;}
+
+.siteShare a,
+.siteShare span,
+.BrdSiteShare span,
+.BrdSiteRes span,
+.BrdSiteAcs span {padding: 5px 10px 5px 30px;}
+.siteShareNo {padding: 5px 10px;}
+
+/* 記事投稿者 */
+.authorBox .authorDetail p.authorDetTi {font-size: 4.6vw;}
+.authorBox .authorDetail p.authorDetName {font-size: 4.2vw;line-height: 1.2em;}
+.authorBox .authorDetail p.authorDetCorp {font-size: 4.2vw;}
+.authorBox .authorDetail p.authorDetProf {font-size: 3.8vw;line-height: 1.4em;}
+
+/* テーブル要素共通 */
+.TableBox table {font-size: 4.6vw;}
+.TableBox table.ScrTable {
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ラジオボタン選択ボタン化 */
+.toggle-button {font-size: 4.0vw;}
+
+/* タイトル箇所設置戻るボタン */
+.mtiBkBt a {font-size: 4.0vw;margin: 0;padding: 5px 10px;}
+
+/****************** 検索部分 ******************/
+
+/* フリーワード検索（基本） */
+.search_container {font-size: 4.2vw;}
+
+/* 検索等のボタン */
+.SearchBT a,
+.SearchBT span,
+.DlPushBT a,
+.DlPushBT span {font-size: 3.8vw;margin: 10px;}
+
+/* 検索ボックス */
+.SearchArea {
+	width: 100%;
+	margin: 20px auto;
+	padding: 10px 5px;
+	font-size:15px;
+}
+.SearchBox {width: 100%;}
+.SearchBox .SearchForm {margin: 0 5px;}
+.SearchBox .SearchForm input.size250 {float: left;width: 150px;}
+.SearchBox .SearchBT {float: left;}
+.SearchBox .SearchBT a {margin: 5px 5px 0 5px;}
+
+/* タグ検索 */
+.tagSearch {margin: 20px auto;padding: 0 0 20px 0;}
+.grad-btn {font-size: 4.8vw;}
+.tagSearch .tagLink a {font-size: 3.8vw;}
+
+/****************** 基本タイトルセット ******************/
+
+/* メインタイトル（主にカテゴリタイトルで使用） */
+.main_ti .bsc_ti {
+	font-size: 18px;
+	text-align: center;
+}
+.mtiBkBtArea {width: 95%;margin: 0 auto;}
+
+/* コンテンツタイトル（コンテンツ・セミナー・商品のメインタイトル） */
+h1.det_ti {font-size: 6.8vw;line-height: 1.4em;}
+
+/* コンテンツタイトル（主にログイン等で使用） */
+h2.sys_ti,
+h3.sys_ti {font-size: 4.4vw;line-height: 1.2em;}
+
+
+/* コンテンツタイトル（主に購入画面等で使用） */
+h2.fotm_ti,
+h3.fotm_ti {font-size: 4.4vw;line-height: 1.2em;}
+
+/* 装飾タイトル（上下罫線） */
+.BrdHTi {
+	margin: 0 auto 20px auto;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 5.8vw;
+	line-height: 1.4em;
+}
+/* 装飾タイトル（下矢印） */
+h2.arwTi,
+h3.arwTi {
+	margin: 30px auto 10px auto;
+	padding: 0 0 28px 0;
+	text-align: center;
+	font-size: 5.8vw;
+}
+h2.arwTi span,
+h3.arwTi span {padding: 10px 0;}
+
+/* 装飾タイトル（左・下罫線） */
+h2.bdrTi,
+h3.bdrTi {
+	margin: 0 auto 10px auto;
+	padding: 10px;
+	text-align: left;
+	font-size: 5.6vw;
+}
+/****************** デザインブロック(テンプレート) ******************/
+
+/* 2分割基本 */
+.tblckArea {width: 100%;margin: 0 auto;}
+.tblckBox {width: 100%;margin: 0;}
+.lyot01 {background: #333;}
+.lyot02 {background: #666;}
+.tblckInn {padding: 20px;}
+.lyot01 .tblckInn {}
+.lyot02 .tblckInn {}
+h2.tblckTi {font-size: 5.2vw;color: #fff;line-height: 1.4em;}
+.tblckTxt {padding: 10px 0;font-size: 4.0vw;color: #fff;line-height: 1.6em;}
+.lyot01 h2.tblckTi,
+.lyot01 .tblckTxt {text-align: left;}
+.lyot02 h2.tblckTi,
+.lyot02 .tblckTxt {text-align: left;}
+.tblckBt {width: 100%;margin: 0 auto;}
+.tblckBt a {
+	width: 80%;
+	display: block;
+	margin: 10px auto 0 auto;
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #848484;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.tblckBt a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+
+/* タイトルテキスト基本 */
+.TiTxtArea {width: 85%;margin: 20px auto;padding: 0;}
+.TiTxtArea p.mainTxt {
+	padding: 0 0 40px 0;
+	font-size: 4.0vw;
+	line-height: 1.8em;
+}
+p.mainCap {
+	padding: 20px;
+	text-align: center;
+	font-size: 4.0vw;
+	line-height: 1.8em;
+}
+/* 3分割基本 */
+.phblckArea {margin: 0 auto;padding: 0;font-size:0;}
+.phblckBox {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+.phblckImg {width: 100%;}
+.phblckTxt {width: 100%;padding: 30px;background: #eee;overflow: hidden;}
+.phblckImg img {width: 100%;}
+.phblckTi {
+	font-size: 6.2vw;
+	line-height: 1.4em;
+	text-align: center;
+}
+.phblckTxtInn {
+	padding: 20px 0;
+	font-size: 4.0vw;
+	line-height: 1.8em;
+}
+/* 4分割基本 */
+.phblck4Area {margin: 0 auto;padding: 0;font-size:0;}
+.phblck4Box {margin: 0 auto;padding: 0;}
+.phblck4Box .phblck4Img {
+	width: 50%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+.phblck4Img {width: 100%;height: 170px;overflow: hidden;}
+.phblck4Img img {width: 100%;}
+.phblck4Txt {width: 100%;padding: 20px 20px 10px 20px;background: #eee;}
+.phblck4Ti {
+	font-size: 5.2vw;
+	line-height: 1.4em;
+	text-align: center;
+}
+.phblck4TxtInn {
+	padding: 20px 0;
+	font-size: 4.0vw;
+	line-height: 1.6em;
+	text-align: left;
+}
+/* コンテンツ一覧基本 */
+.ConLiArea,
+.SemLiArea,
+.PrdLiArea {margin: 0 auto;padding: 0;}
+.ConLiArea .CautTxt,
+.SemLiArea .CautTxt,
+.PrdLiArea .CautTxt {width: 90%;margin: 0 auto;}
+
+/* コンテンツ一覧左右基本 */
+.ConLiClArea {
+	margin: 0 auto;
+	padding: 30px 0;
+	background: #e8e8e8;
+}
+.ConLiClAreaInn {width: var(--app-main-width);margin: 0 auto;}
+.ConLiCllckBox {
+	width: 95%;
+	margin: 0 auto;
+	padding: 20px 10px;
+	background: #fff;
+}
+.ConLiCllckBox .ListBox {
+	margin-top: 20px;
+	padding: 10px;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+/* 写真左右・テキスト左右基本 */
+.lrblckArea {width: 100%;}
+.lrblckBox {
+	padding-top: 180px;
+}
+.lyotL .lrblckBox {}
+.lyotR .lrblckBox {}
+.lrblckInn {width: 100%;padding: 30px;}
+h2.lrblckTi {font-size: 5.2vw;line-height: 1.4em;}
+.lrblckTxt {padding: 20px 0;font-size: 4.0vw;line-height: 1.6em;}
+.lrblckBt a {
+	width: 80%;
+	display: block;
+	margin: 20px auto 0 auto;
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #848484;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.lrblckBt a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+
+.lrblckArea.lrblckImg01 {background: #eee center top no-repeat;background-size:contain;}
+.lrblckArea.lrblckImg02 {background: #eee center top no-repeat;background-size:contain;}
+
+/* 背景・矢印基本 */
+.TiTxtArwArea {
+	margin: 0 auto 60px auto;
+	padding: 20px 0 30px 0;
+	background: var(--app-main-cr);
+	color: var(--app-main-txt);
+	text-align: center;
+	position: relative;
+}
+.TiTxtArwArea h2.TiTxtArwTi {
+	font-size: 5.2vw;
+	text-align: center;
+	padding: 20px 0;
+}
+.TiTxtArwArea p.TiTxtArwTxt {padding: 20px;font-size: 4.0vw;line-height: 1.6em;}
+.SvgImg {
+	position: absolute;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	bottom: -75px;
+}
+.SvgImg .SvgImgWaku {
+	width: 73px;
+	height: 73px;
+	border-radius: 50%;
+	background: #fff;
+}
+.SvgImg .IcoSvg {padding-top: 3px;width: 70px;height: 70px;fill: var(--app-main-cr);}
+
+/* 写真背景基本 */
+.bkblckArea {
+	margin: 0 auto;
+	padding-top: 250px;
+	height: 490px;
+	background: #666;
+}
+.bkblckTxt {
+	width: 90%;
+	margin: 0 auto;
+	padding: 20px;
+	background:rgba(0,20,48,0.8);
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.bkblckTxtInn {font-size: 4.0vw;line-height: 1.6em;color: #fff;}
+
+/* SNSリンク基本 */
+.snsblckArea {
+	margin: 0 auto;
+	padding: 10px 0;
+	background: var(--app-main-cr);
+	text-align: center;
+}
+ul.snsblckAreaInn {
+	list-style: none;
+	width: 260px;
+	margin-left: auto;
+	margin-right: auto;
+}
+ul.snsblckAreaInn li {float: left;}
+.snsblckAreaInn a {
+	color:#fff;
+	width: 55px;
+	height: 55px;
+	font-size: 25px;
+	margin: 0 5px;
+	padding: 17px 10px 10px 10px;
+	display: block;
+	border-radius: 50%;
+	background: #999;
+}
+.snsblckAreaInn a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+
+/* 地図エリア基本 */
+.accsArea {padding: 10px 0;background: #f9f9f9;}
+.accsArea p.mainCap {
+	padding: 10px 0;
+	text-align: center;
+	font-size: 4.0vw;
+	line-height: 1.6em;
+}
+.google_map{
+	position:relative;
+	width:100%;
+	height:0;
+	margin: 30px auto;
+	padding-top:60%;
+}
+.google_map iframe{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}

@@ -1,0 +1,261 @@
+/***************************************************
+information
+	filename : form_common.css;
+***************************************************/
+/******* BASE *******/
+/* input */
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;vertical-align:middle;margin:2px;padding:0px;}
+input.txt,textarea.txt {margin:2px;padding: 10px;border:1px solid var(--form-brd);vertical-align:middle;font-size:14px;color:var(--form-txt);border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;background-color: var(--form-fc);font-weight: normal;}
+input.txt:focus,textarea.txt:focus {background-color: var(--form-fc-cr);}
+input.ime {ime-mode: disabled;}	
+input.txc {text-align: center;}
+input.txr {text-align: right;}
+input.txt::-webkit-input-placeholder,
+textarea.txt::-webkit-input-placeholder {color: var(--form-txt-dis);}
+input.txt:-ms-input-placeholder,
+textarea.txt:-ms-input-placeholder {color: var(--form-txt-dis);}
+input.txt::-moz-placeholder,
+textarea.txt::-moz-placeholder {color: var(--form-txt-dis);}
+
+/******* LINK BUTTON AREA *******/
+.BtM {}
+.BtM button,
+.BtM a,
+.BtM span {
+	border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	text-decoration:none;
+	display:block;
+	font-weight:bold;
+}
+.BtM button.next::after,
+.BtM a.next::after,
+.BtM span.next::after {
+	position: absolute;
+	top: 50%;
+	right: .2em;
+	content: '';
+	margin-top: -5px;
+	border: 7px solid transparent;
+	border-top-width: 5px;
+	border-bottom-width: 5px;
+	border-left-color:  var(--app-main-txt-u);
+}
+
+.BtM button.back::after,
+.BtM a.back::after,
+.BtM span.back::after {
+	position: absolute;
+	top: 50%;
+	left: .2em;
+	content: '';
+	margin-top: -5px;
+	border: 7px solid transparent;
+	border-top-width: 5px;
+	border-bottom-width: 5px;
+	border-right-color:  var(--app-main-txt-u);
+}
+.BtM span.next::after,
+.BtM span.back::after {filter: alpha(opacity=40);-moz-opacity:0.40;opacity:0.40;}
+
+/******* LINK button Rounded *******/
+input[type="submit"], input[type="reset"], input[type="button"], button{cursor: pointer;}
+
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="button"]:disabled,
+input:hover[type="submit"]:disabled,
+input:hover[type="reset"]:disabled,
+input:hover[type="button"]:disabled{
+background:#DCDCDC;
+cursor:not-allowed;
+}
+
+input[type="text"][disabled]{
+background:#eaeaea;
+color:#c0c0c0;
+cursor:not-allowed;
+}
+
+/* select */
+select.selectMenu  {
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: none;
+	border:1px solid var(--form-brd);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin: 0;
+	padding: 10px;
+	background:var(--form-fc) url(../../../core_sys/common/images/sys/arw_select_down.png) no-repeat;
+	background-size:30px 29px;
+	background-position: right center;
+	font-size: 14px;
+	color:#434343;
+	vertical-align: middle;
+	cursor: pointer;
+	}
+select.selectMenu:hover {background:var(--form-fc-cr) url(../../../core_sys/common/images/sys/arw_select_downO.png) no-repeat;background-position: right center;}
+select.selectMenu  {-webkit-appearance: none;-moz-appearance: none;text-indent: 0.01px;text-overflow: '';}
+select.selectMenu::-ms-expand {display: none;}
+select.selectMenu[disabled]{
+	border:1px solid var(--form-brd-dis);
+	background:var(--form-fc-dis);
+	color:var(--form-txt-dis);
+	cursor:not-allowed;
+}
+
+/* checkbox radio */
+label.radio {position: relative;display: inline-block;width: 15px;height: 15px;top: 2px;border: 1px solid var(--form-brd);border-radius : 100%;overflow: hidden;cursor: pointer;}
+label.radio:before {content: '';display: block;width: 11px;height: 11px;border-radius: 100%;position: absolute;top: 2px;left: 2px;z-index: 1;background-color : var(--form-rd-ch);}
+label.radio input[type="radio"] {-moz-appearance: none;-webkit-appearance: none;margin: 0px;position: absolute;z-index: 2;top: -2px;left: -23px;width: 20px;height: 20px;display: block;box-shadow : 20px 0px #FFF;}
+label.radio input[type="radio"]:checked {box-shadow : none;}
+label.radio input[type="radio"]:focus {box-shadow : 20px 0px #FFF;opacity: 0.2;}
+
+label.radio_text {cursor: pointer;position: relative;padding-top : 0;margin-right : 20px;overflow: hidden;padding-left : 25px;display: inline-block;}
+label.radio_text:before {position: absolute;width: 15px;height: 15px;border: 1px solid var(--form-brd);border-radius : 50%;left: 0px;top: 4px;content: '';z-index: 3;}
+label.radio_text:after {content: '';position: absolute;width: 9px;height: 9px;border-radius: 100%;left: 3px;top: 7px;background-color : var(--form-rd-ch);z-index: 1;}
+label.radio_text input[type="radio"] {-moz-appearance: none;-webkit-appearance: none;position: absolute;z-index: 2;width: 20px;height: 20px;left: -23px;top: 1px;margin: 0px;box-shadow : 20px -1px #FFF;}
+label.radio_text input[type="radio"]:checked {box-shadow : none;}
+label.radio_text input[type="radio"]:focus {opacity: 0.2;box-shadow : 20px -1px #FFF;}
+
+label.radio_text_dis {cursor: pointer;position: relative;padding-top : 3px;padding-left : 5px;margin-right : 20px;overflow: hidden;padding-left : 25px;display: inline-block;color:#efefef;cursor:not-allowed;}
+label.radio_text_dis:before {position: absolute;width: 15px;height: 15px;border: 1px solid var(--form-brd-dis);border-radius : 50%;left: 0px;top: 4px;content: '';z-index: 3;}
+label.radio_text_dis:after {content: '';position: absolute;width: 9px;height: 9px;border-radius: 100%;left: 3px;top: 7px;background-color : var(--form-rd-dis);z-index: 1;}
+label.radio_text_dis input[type="radio"] {-moz-appearance: none;-webkit-appearance: none;position: absolute;z-index: 2;width: 20px;height: 20px;left: -23px;top: 1px;margin: 0px;box-shadow : 20px -1px #FFF;}
+label.radio_text_dis input[type="radio"]:checked {box-shadow : none;}
+label.radio_text_dis input[type="radio"]:focus {opacity: 0.2;box-shadow : 20px -1px #FFF;}
+
+label.checkbox {cursor: pointer;width: 20px;height: 20px;top: 2px;border: 1px solid var(--form-brd);border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;background : #fff;overflow: hidden;position: relative;display: inline-block;box-sizing : border-box;}
+label.checkbox input[type="checkbox"] {-moz-appearance: none;-webkit-appearance: none;margin: 0;padding: 0;position: absolute;left: 20px;width: 20px;height: 20px;left: -40px;box-shadow : 41px 0px var(--form-fc);z-index: 2;}
+label.checkbox input[type="checkbox"]:checked {box-shadow : none;}
+label.checkbox input[type="checkbox"]:checked:focus {box-shadow : 40px 0px #fff;opacity: 0.1;}
+label.checkbox input[type="checkbox"]:focus {box-shadow : 41px 0px #fff;}
+label.checkbox:after {content: '';position: absolute;top: 10px;left: 6px;display: block;margin-top: -8px;width: 8px;height: 12px;border-right: 3px solid var(--form-rd-ch);border-bottom: 3px solid var(--form-rd-ch);transform: rotate(45deg);-webkit-transform : rotate(45deg);-moz-transform: rotate(45deg);z-index: 1;}
+
+label.checkbox_text {cursor: pointer;position: relative;padding-bottom : 2px;margin-right : 15px;overflow: hidden;position: relative;padding-left : 30px;display: inline-block;box-sizing   : border-box;}
+label.checkbox_text:before {content: '';position : absolute;width: 20px;height: 20px;left: 0px;top: 0;border: 1px solid var(--form-brd);border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;z-index: 3;}
+label.checkbox_text:after {content: '';position: absolute;top: 10px;left: 6px;display: block;margin-top: -8px;width: 8px;height: 12px;border-right: 3px solid var(--form-rd-ch);border-bottom: 3px solid var(--form-rd-ch);transform: rotate(45deg);-webkit-transform : rotate(45deg);-moz-transform: rotate(45deg);z-index: 1;}
+label.checkbox_text input[type="checkbox"] {-moz-appearance: none;-webkit-appearance: none;position: absolute;left: -40px;width: 20px;height: 20px;display: block;box-shadow : 41px 0px var(--form-fc);z-index: 2;margin: 0px;padding: 0px;}
+label.checkbox_text input[type="checkbox"]:checked {box-shadow : none;}
+label.checkbox_text input[type="checkbox"]:checked:focus {box-shadow : 40px 0px var(--form-fc-cr);opacity: 0.1;}
+label.checkbox_text input[type="checkbox"]:focus {box-shadow : 41px 0px var(--form-fc-cr);}
+
+label.checkbox_text_dis {cursor: pointer;position: relative;padding-left : 20px;padding-bottom : 2px;margin-right : 15px;overflow: hidden;position: relative;padding-left : 25px;display: inline-block;box-sizing   : border-box;color: var(--form-rd);cursor:not-allowed;}
+label.checkbox_text_dis:before {content: '';position : absolute;width: 18px;height: 18px;left: 0px;top: 0;border: 1px solid var(--form-brd-dis);border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;z-index: 3;}
+label.checkbox_text_dis:after {content: '';position: absolute;top: 10px;left: 6px;display: block;margin-top: -8px;width: 8px;height: 12px;border-right: 3px solid  var(--form-rd-dis);border-bottom: 3px solid  var(--form-rd-dis);transform: rotate(45deg);-webkit-transform : rotate(45deg);-moz-transform: rotate(45deg);z-index: 1;}
+label.checkbox_text_dis input[type="checkbox"] {-moz-appearance: none;-webkit-appearance: none;position: absolute;left: -40px;width: 20px;height: 20px;display: block;box-shadow : 41px 0px #FFF;z-index: 2;margin: 0px;padding: 0px;}
+label.checkbox_text_dis input[type="checkbox"]:checked {box-shadow : none;}
+label.checkbox_text_dis input[type="checkbox"]:checked:focus {box-shadow : 40px 0px #666;opacity: 0.1;}
+label.checkbox_text_dis input[type="checkbox"]:focus {box-shadow : 41px 0px #EEE;}
+
+label.checkbox_text_pd {cursor: pointer;}
+
+/**** FORM SIZE ****/
+input.size60 {width:60px;}
+input.size80 {width:80px;}
+input.size100 {width:100px;}
+input.size120 {width:120px;}
+input.size140 {width:140px;}
+input.size160 {width:160px;}
+input.size180 {width:180px;}
+input.size200 {width:200px;}
+input.size220 {width:220px;}
+input.size240 {width:240px;}
+input.size250 {width:250px;}
+input.size300 {width:300px;}
+input.size350 {width:350px;}
+input.size400 {width:400px;}
+input.size450 {width:450px;}
+input.size500 {width:500px;}
+input.size550 {width:550px;}
+input.size600 {width:600px;}
+input.size650 {width:650px;}
+input.size100p {width:98%;}
+input.PayCRDNO {width:80px;}
+input.PayCRDNAME {width:150px;}
+
+select.size60 {width:60px;}
+select.size80 {width:80px;}
+select.size100 {width:100px;}
+select.size120 {width:120px;}
+select.size140 {width:140px;}
+select.size150 {width:150px;}
+select.size160 {width:160px;}
+select.size180 {width:180px;}
+select.size200 {width:200px;}
+select.size250 {width:250px;}
+select.size300 {width:300px;}
+select.size350 {width:350px;}
+select.size400 {width:400px;}
+select.size450 {width:450px;}
+select.size500 {width:500px;}
+select.size550 {width:550px;}
+select.size600 {width:600px;}
+select.size650 {width:650px;}
+select.size100p {width:100%;}
+
+textarea.size60 {width:60px;}
+textarea.size80 {width:80px;}
+textarea.size100 {width:100px;}
+textarea.size120 {width:120px;}
+textarea.size140 {width:140px;}
+textarea.size160 {width:160px;}
+textarea.size180 {width:180px;}
+textarea.size200 {width:200px;}
+textarea.size250 {width:250px;}
+textarea.size300 {width:300px;}
+textarea.size350 {width:350px;}
+textarea.size400 {width:400px;}
+textarea.size450 {width:450px;}
+textarea.size500 {width:500px;}
+textarea.size550 {width:550px;}
+textarea.size600 {width:600px;}
+textarea.size650 {width:650px;}
+textarea.size100p {width:98%;}
+
+/* ===================================================================================
+for SP max-width: 640px
+=================================================================================== */
+@media screen and (max-width: 640px) {
+
+	input.txt,
+	textarea.txt,
+	select.selectMenu {padding: 10px;font-size:4.2vw;}
+	input.size200,
+	input.size250,
+	input.size300,
+	input.size350,
+	input.size400,
+	input.size450,
+	input.size500,
+	input.size550,
+	input.size600,
+	input.size650,
+	input.size100p,
+	select.size150,
+	select.size160,
+	select.size180,
+	select.size200,
+	select.size250,
+	select.size300,
+	select.size350,
+	select.size400,
+	select.size450,
+	select.size500,
+	select.size550,
+	select.size600,
+	select.size650,
+	textarea.size250,
+	textarea.size300,
+	textarea.size350,
+	textarea.size400,
+	textarea.size450,
+	textarea.size500,
+	textarea.size550,
+	textarea.size600,
+	textarea.size650 {width:98%;}
+}

@@ -1,0 +1,198 @@
+@charset "utf-8";
+@import "../common.scss";
+
+/***************************************************
+body font
+***************************************************/
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {color: #333;font-family: var(--main-font);}
+
+p{
+    font-size: 16px;
+    line-height: 1.75;
+    padding:16px 0px;
+    @include pc(sp){
+      font-size:14px;
+      padding:8px 0px;
+    }
+    &.center{
+      text-align: center;
+    }
+    &.small{
+      font-size:14px;
+      line-height: 1.65;
+      padding:12px 0px;
+      @include pc(sp){
+        font-size:13px;
+      }
+    }
+  }
+  ul li {
+    font-size:16px;
+    line-height:1.75;
+    list-style:none;
+    @include pc(sp){
+      font-size:14px;
+    }
+  }
+  li{list-style: none;}
+  
+/***************************************************
+article設定
+***************************************************/
+// コンテンツ
+#contents{
+  padding:48px 0px 48px;
+  @include pc(nb){
+    padding:40px 0px 40px;
+  }
+  @include pc(sp){
+    padding:24px 0px 24px;
+  }
+}
+  
+/***************************************************
+コンテイナー・セクション
+***************************************************/
+// コンテイナー
+.container, .footerBox{
+  max-width: 1080px;
+  margin: auto;
+  @media screen and (max-width:1200px){
+    width:100%;
+    padding-left:40px;
+    padding-right:40px;
+  }
+  @include pc(tb){
+    width: 90%;
+    padding:0px;
+  }
+  &.mini{
+    max-width:760px;
+    @include pc(nb){
+      width:100%;
+    }
+    @include pc(tb){
+      width:90%;
+    }
+    @include pc(sp){
+      width:90%;
+    }
+  }
+}
+// セクション
+section{
+    padding: 16px 0px 64px;
+    @include pc(tb){
+        padding: 1px 0px 48px;
+    }
+    @include pc(sp){
+        padding: 1px 0px 24px;
+    }
+}  
+
+/***************************************************
+ボタン
+***************************************************/
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+// ボタンデザイン
+.btn{
+    a{
+      background:#E1F8F7;
+      color:var(--link-color);
+      display:block;
+      width:300px;
+      padding:18px;
+      font-size:16px;
+      text-align: center;
+      border-radius: 8px;
+      font-weight:bold;
+      position:relative;
+      letter-spacing: 0.03em;
+      @include pc(sp){
+        border-radius: 6px;
+        font-size:14px;
+        padding:14px;
+        width:75%;
+      }
+      &::after{
+        position:absolute;
+        content:'';
+        border-style: solid;
+        border-width: 10px 0 10px 8px;
+        border-color: transparent transparent transparent #78CDC9;
+        right:8px;
+        top:50%;
+        transform:translateY(-50%);
+      }
+    }
+    &.yellow{
+      a{
+        background:#fff;
+        color:#ECBF00;
+        &::after{
+          border-color: transparent transparent transparent #F0E191;
+        }
+      }
+    }
+    &.blue{
+      a{
+        background:#fff;
+        color:#137ADF;
+        &::after{
+          border-color: transparent transparent transparent #87B9EA;
+        }
+      }
+    }
+    &.grn2{
+      a{
+        background:#01A59C;
+        color:#fff;
+        &::after{
+          border-color: transparent transparent transparent #78CDC9;
+        }
+      }
+    }
+    &.navy{
+      a{
+        background:#022748;
+        color:#fff;
+        &::after{
+          content:none;
+        }
+      }
+    }
+  }
+  
+// アニメーション
+.btn a{
+transition:0.3s ease;
+&:hover{
+    opacity: 0.75;
+    transition:0.3s ease;
+    transform:scale(0.99);
+    // &::after{
+    // transform:translate(-3px,-50%);
+    // transition:0.2s ease;
+    // }
+  }
+}
+
+/***************************************************
+画像
+***************************************************/
+img{
+    &.icon{
+      width:80px;
+      margin:auto;
+      @include pc(sp){
+        width:72px;
+      }
+    }
+  }
+  

@@ -1,0 +1,72 @@
+@charset "utf-8" ;
+
+/* デフォルト */
+
+$breakpoints: (
+    "ssp" : "screen and (max-width:320px)",
+    "sp" : "screen and (max-width:540px)",
+    "tb" : "screen and (max-width:768px)",
+    "nb" : "screen and (max-width:1024px)",
+) !default;
+
+@mixin pc($breakpoint :nb){
+  @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.tab-box {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+  filter: drop-shadow(0 3px 30px #F5F5F5);
+  padding: 5px 3px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  @include pc(tb){
+    width: 100%;
+  }
+  @include pc(sp){
+    flex-wrap: wrap;
+  }
+  .tab {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #333333;
+    border-radius: 10px;
+    padding: 20px;
+    @include pc(tb){
+      padding: 10px;
+    }
+    p{
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .tab-active {
+    background-color: #E1F8F7;
+  }
+}
+
+.tab_content {
+  display: none;
+}
+
+.tab_show {
+  display: block;
+}
+
+.tab{
+  width: 90%;
+  @include pc(sp){
+    width: 45%;
+  }
+}

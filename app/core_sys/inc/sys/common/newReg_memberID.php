@@ -1,0 +1,1 @@
+<?php echo sprintf("%07d",$session->getMemberId()); ?>

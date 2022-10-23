@@ -1,0 +1,1667 @@
+@charset "utf-8";
+/***************************************************
+information
+  filename : common_parts.css;
+***************************************************/
+
+/****************** 基本レイアウト ******************/
+/* ベースレイアウト */
+html {margin: 0;padding: 0;box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+#wrapper,
+#header,
+#headerSub,
+#contents,
+.contentsInn,
+#main,
+.mainInn,
+.mainInnS,
+#footerSub,
+#footer,
+#spheader,
+#spfooter {margin: 0 auto;padding: 0;}
+
+/****************** レイアウト ******************/
+
+/* 枠ボックス */
+.comBox {
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.comBoxInn {
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.top,
+.con_list,
+.con_det,
+.sem_list,
+.sem_det,
+.prd_list,
+.prd_det,
+.mytop_det,
+.mysv_det,
+.mysem_det,
+.myprd_det,
+.myprf_det,
+.mypost_det,
+.mycnt_det,
+.mybnf_det,
+.myafl_det,
+.ordsv_det,
+.ordsem_det,
+.ordprd_det,
+.brd_det,
+.login_det,
+.reg_det,
+.rmd_det,
+.popup {margin-left: auto;margin-right: auto;}
+body.sp_prev {width: 417px;margin: 0 auto;}
+
+/* コンテンツエリア */
+.contents_list,
+.contents_detaile {margin-left: auto;margin-right: auto;}
+
+/****************** ヘッダー ******************/
+/* ヘッダーロゴ */
+#header p.logo {}
+#header p.logo img,
+#spheader p.logo img,
+#spfooter p.logo img {max-width: 100%;}
+#header li {list-style: none;}
+
+/****************** 各種ボタン ******************/
+
+/* ページトップボタン */
+.pagetop {display: none;position: fixed;bottom: 60px;right: 10px;}
+.spFootNavi .pagetop {display: none;position: fixed;bottom: 110px;right: 10px;}
+.pagetop a {
+	display: block;
+	padding: 20px 10px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	z-index: 9990;
+}
+.pagetop a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+
+/****************** スライドショー ******************/
+
+/* スライドショー(画面サイズ最大) */
+.slideshow_area {position: relative;margin: 0;}
+.slideshow_box {position: absolute;z-index: 1;right: -100vw;left: -100vw;margin: 0 auto;}
+
+/* スライドショー(シングル) ボタン要素 */
+.slide_single_box .slick-prev {}
+.slide_single_box .slick-next {}
+.slide_single_box .slick-prev,
+.slide_single_box .slick-next {z-index: 100;}
+.slide_single_box .slick-prev::before,
+.slide_single_box .slick-next::before {}
+
+/* スライドショー(1画像スライド表示) */
+.slideDf_area {}
+.slideDfInn {}
+.slideDfInn p.ph {
+	width: calc(100% + 40px);
+	height: 0;
+	margin: 0 -20px;
+	padding-top:56.75%;
+	overflow: hidden;
+	background-size:cover;
+	position: relative;
+}
+.slideDfInn p.ph::before{
+	content:"";
+	position:absolute;
+	top:-5%;
+	left:-5%;
+	width:110%;
+	height:110%;
+	background: inherit;
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px);
+}
+.slideDfInn p.ph img {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+/* スライドショー(3画像スライド複数表示) */
+.slideDfN_area {}
+.slideDfN_box {width: 100%;margin: 0 auto;}
+.slideDfN_box .slick-slide img {width: 100%;height: auto;}
+.slideDfN_box .slick-slide:not(.slick-center) {
+	-webkit-filter: opacity(50%);
+	-moz-filter: opacity(50%);
+	-o-filter: opacity(50%);
+	-ms-filter: opacity(50%);
+	filter: opacity(50%);
+	transition: 0.2s linear;
+}
+.slideDfN_box .slick-dots {
+	background: #1d1d1d;
+	margin: 0;
+	padding: 20px 0;
+	bottom: -65px;
+}
+
+/****************** ナビゲーション ******************/
+
+/* スクロールメニュー */
+.scroll-nml{z-index: 3;}
+.scroll-fix{
+	width: 100%;
+	top: -100px;
+	left: 0;
+	position: fixed;
+	z-index: 200;
+}
+/* サブナビ(ヘッダー) */
+#header .snavi {padding: 0;}
+#header .snavi ul {margin: 0 auto;}
+#header .snavi li {list-style: none;display: inline-block;}
+#header .snavi a {
+	display: block;
+	position: relative;
+	margin: 0px 20px;
+	padding: 5px 0;
+	font-weight: normal;
+	text-decoration: none;
+}
+#header .snavi a:before,
+#header .snavi a.crt:before {
+	content: '';
+	width: 0;
+	left: 50%;
+	bottom: 0;
+	transition: all 0.3s ease;
+	position: absolute;
+	display: block;
+}
+#header .snavi a:after,
+#header .snavi a.crt:after {
+	content: '';
+	width: 0;
+	right: 50%;
+	bottom: 0;
+	transition: all 0.3s ease;
+	position: absolute;
+	display: block;
+}
+#header .snavi a:hover:before,
+#header .snavi a:hover:after,
+#header .snavi a.crt:before,
+#header .snavi a.crt:after {width: 30%;}
+
+/* サブナビ(ドロワー) */
+.drSnavi .snavi {padding: 0;}
+.drSnavi .snavi ul {margin: 0 auto;}
+.drSnavi .snavi li {list-style: none;}
+.drSnavi .snavi li a {
+	text-decoration:none;
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px ;
+	display:-webkit-flex;
+	display:flex;-webkit-align-items:
+	center;align-items:
+	center;position:relative;
+}
+/* グローバルナビ */
+#header .gnavi {margin: 0 auto;padding: 0;}
+#header .gnavi ul,
+#header .gnavi .mCSB_container {
+	margin: 0 auto;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	padding: 8px 0;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+}
+
+#header .gnavi .mCSB_container {
+	padding: 0;
+}
+#header .gnavi li {
+	width: 100%;
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	letter-spacing: normal;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#header .gnavi ul::-webkit-scrollbar {height: 3px;}
+#header .gnavi ul::-webkit-scrollbar-track {}
+#header .gnavi ul::-webkit-scrollbar-thumb{border-radius: 8px;}
+#header .gnavi a {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	text-align: center;
+}
+#header .gnavi li:last-child {}
+#header .gnavi a span,
+#header .gnavi a.crt span {
+	content: '';
+	width: 0;
+	height:2px;
+	left: 50%;
+	bottom: -8px;
+	transition: all 0.3s ease;
+	position: absolute;
+	display: block;
+	transform: translate(-50%,0);
+}
+#header .gnavi a:hover span,
+#header .gnavi a.crt span {width: 60%;}
+
+#header .gnavi ul.dropdown {
+  overflow: inherit;
+}
+#header .gnavi ul.dropdown>li{
+	position:relative;
+	overflow: visible;
+	z-index: 5;
+}
+#header .gnavi ul.dropdown nav{
+	display:none;
+	position:absolute;
+	left: 0;
+	top:100%;
+	width: calc(100% + 1px);
+}
+#header .gnavi ul.dropdown ul{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+#header .gnavi ul.dropdown ul li{
+	width:100%;
+	background: var(--app-glnv-txt);
+	border: solid var(--app-glnv-cr);
+	border-width:0 1px 1px;
+}
+#header .gnavi ul.dropdown ul a{
+	color:var(--app-glnv-cr);
+}
+/* ドロワメニュー(ボタン) */
+.drbtn{
+	position:fixed;
+	-webkit-transition:ease 0.5s;
+	transition:ease 0.5s;
+	cursor:pointer;
+	align-items:
+	flex-end;display:
+	flex;justify-content:center;
+	z-index:10000;
+}
+.hambarg{
+	position:absolute;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	-webkit-transition:ease 0.5s;
+	transition:ease 0.5s;
+}
+.hambarg:nth-child(1){top:20%;left:50%;}
+.hambarg:nth-child(2){top:35%;left:50%;}
+.hambarg:nth-child(3){top:50%;left:50%;}
+.hambargMenu {position:absolute;top:30%;}
+.drbtn.action {}
+
+.drbtn.action .hambarg:nth-child(1){
+	top:50%;-webkit-transform:
+	translate(-50%, -50%) rotate(45deg);
+	transform:translate(-50%, -50%) rotate(45deg);
+}
+.drbtn.action .hambarg:nth-child(2){
+	top:50%;-webkit-transform:
+	translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	opacity:0;
+}
+.drbtn.action .hambarg:nth-child(3){
+	top:50%;-webkit-transform:
+	translate(-50%, -50%) rotate(-45deg);
+	transform:translate(-50%, -50%) rotate(-45deg);
+}
+.drbtn.action .hambargMenu {display:none;}
+
+/* グローバルナビ(シンプル) */
+#header .gnavis {}
+#header .gnavis ul {margin: 0px;}
+#header .gnavis li {list-style: none;display: inline-block;}
+#header .gnavis a {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0 15px;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
+#header .gnavis a span,
+#header .gnavis a.crt span {
+	content: '';
+	width: 0;
+	height:1px;
+	background:var(--app-main-cr-c);
+	left: 50%;
+	bottom: -8px;
+	transition: all 0.3s ease;
+	position: absolute;
+	display: block;
+	transform: translate(-50%,0);
+}
+#header .gnavis a:hover span,
+#header .gnavis a:hover span,
+#header .gnavis a.crt span,
+#header .gnavis a.crt span {width: 60%;}
+.mCSB_draggerContainer {
+    visibility:hidden;
+}
+.gnavi .mCSB_scrollTools {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+
+
+.mCSB_scrollTools a{
+    pointer-events: auto;
+}
+.mCSB_scrollTools a::before{
+    content:"";
+    width:14px;
+    height:14px;
+    border:solid var(--app-glnv-txt);
+    border-width:2px 2px 0 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+a.mCSB_buttonLeft::before {transform: rotate(-135deg);}
+a.mCSB_buttonRight::before {transform: rotate(45deg);}
+.mCustomScrollBox{width:100%;}
+#header .scroll a.mCSB_buttonLeft,
+#header .scroll a.mCSB_buttonRight,
+#header .scEnd a.mCSB_buttonLeft,
+#header .scStart a.mCSB_buttonRight {
+    opacity: 1;
+    pointer-events:auto;
+    position: absolute;
+}
+#header .scEnd a.mCSB_buttonRight,
+#header .scStart a.mCSB_buttonLeft {
+    opacity: 0;
+    pointer-events:none;
+}
+/* フッターナビ */
+#footer .fnavi{}
+#footer .fnavi ul {margin-top: 10px;}
+#footer .fnavi li {list-style:none;padding: 2px 0;}
+#footer .fnavi a {
+	position: relative;
+	margin: 0px 10px;
+	padding-left: 20px;
+	text-decoration: none;
+	font-weight:normal;
+	display: inline-block;
+	align-items: center;
+}
+#footer .fnavi a:before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	margin-top: 0;
+	border: 0px;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+#footer .fnavi a:hover {text-decoration: underline;}
+
+/* ドロワメニュー(枠) */
+.drawer,
+.modal-search {
+	-webkit-transition:ease 0.5s;
+	transition:ease 0.5s;
+	position:absolute;
+	position:fixed;
+	z-index:9999;
+}
+.drawer.action,
+.modal-search.action {
+	-webkit-transform:
+	translateX(0);
+	transform:
+	translateX(0);
+	overflow-y:auto;
+	-webkit-overflow-scrolling:touch;
+}
+
+/* アコーディオンメニュー */
+.widget h2 {
+	margin: 20px auto 0 auto;
+	padding: 10px;
+	text-align: left;
+}
+.widget ul {margin:0}
+.widget li {position:relative;list-style:none;border-top: 1px solid var(--app-main-brd);}
+.widget li a {
+	text-decoration:none;
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	padding:0;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-align-items:center;
+	align-items:center;
+	position:relative;
+}
+.widget li .btn {
+	display:block;
+	content:"";
+	width:50px;
+	height:50px;
+	top:0;
+	right:0;
+	position:absolute;
+	padding: 13px 0;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+}
+.widget li .btn:before{content: url(../../../core_sys/common/images/sys/arw_down_bk.png);}
+.widget li .btn.active:before{content: url(../../../core_sys/common/images/sys/arw_up_bk.png);}
+.widget li a {padding-left: 10px;}
+.widget .children li {padding-left: 30px;}
+.widget h2 {padding: 10px;}
+
+/* パンくずリンク */
+.pan_link {margin: 0 auto;padding: 10px 0;}
+.pan_link ul {margin: 5px auto;}
+.pan_link li {
+	float: left;
+	margin-left: 5px;
+	list-style:none;
+}
+.pan_link a {text-decoration: none;}
+.pan_link a:hover {text-decoration: underline;}
+
+/* ページナンバーナビ */
+.PageNum {}
+.PageNum_link {
+	position: relative;
+	overflow: hidden;
+	margin: 20px auto;
+	padding: 20px 5px;
+}
+.PageNum_link ul {
+	position: relative;
+	left: 50%;
+	float: left;
+}
+.PageNum_link li {
+	position: relative;
+	left: -50%;float: left;
+	list-style:none;
+}
+.PageNum_link a {
+	margin: 0px 2px;
+	padding: 5px 10px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	text-decoration: none;
+}
+.PageNum_link a.crt,
+.PageNum_link a:hover {text-decoration: none;}
+
+/* 記事横移動ナビ */
+.NBLink {margin: 0 auto;padding: 20px 0 0 0;}
+.NBBack {float: left;}
+.NBNext {float: right;}
+
+
+/* カテゴリナビスライダー */
+.catenavSl {}
+.catenavSl ul,
+.catenavSl .mCSB_container {
+	margin: 0 auto;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	padding: 0;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+}
+.catenavSl li {width: 100%;padding: 0;}
+.catenavSl ul::-webkit-scrollbar {height: 3px;}
+.catenavSl ul::-webkit-scrollbar-track {}
+.catenavSl ul::-webkit-scrollbar-thumb{border-radius: 8px;}
+.catenavSl li a {
+	display: block;
+	padding: 10px 0;
+	font-size: 14px;
+	text-align: center;
+
+}
+.catenavSl li.crt a {text-decoration: none;}
+
+/* カテゴリナビ横 */
+.catenavY {margin: 0 auto;padding: 20px 0;}
+.catenavY ul {margin: 0 auto;padding: 0;letter-spacing: -0.5em;}
+.catenavY li {
+	display: inline-block;
+	margin: 0;
+	padding: 2px;
+	list-style: none;
+	letter-spacing: normal;
+}
+.catenavY ul.ct2 li {width: calc(100%/2);}
+.catenavY ul.ct3 li {width: calc(100%/3);}
+.catenavY ul.ct4 li {width: calc(100%/4);}
+.catenavY ul.ct5 li {width: calc(100%/5);}
+
+.catenavY li a {
+	display: block;
+	margin: 0;
+	padding: 10px 0;
+	line-height: 1.4em;
+	text-align: center;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.catenavY li a.crt,
+.catenavY li a:hover {text-decoration: none;}
+
+/* カテゴリナビ縦 */
+.catenav {margin: 0 auto;padding: 0;}
+.catenav li {margin: 0 auto;padding: 2px 0;list-style: none;}
+.catenav li a {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.catenav li a.crt,
+.catenav li a:hover {text-decoration: none;}
+
+/* ラジオボタンタブ */
+.selectBt {margin: 0 auto;padding: 0;}
+.selectBt ul {margin: 20px auto;padding: 0;}
+.selectBt li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.selectBt ul.cl2 li {width: calc(100%/2);}
+.selectBt ul.cl3 li {width: calc(100%/3);}
+.selectBt ul.cl4 li {width: calc(100%/4);}
+
+label.tab_item {
+	display: block;
+	margin: 0 1px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.selectBt input[type="radio"]:checked + label.tab_item {}
+.selectBt input[type="radio"] {display: none;}
+
+/* 表示形式選択 */
+.listIncSelect {margin: 0 auto;padding: 0;}
+.listIncSelect ul {float: right;margin: 10px 0;padding: 0;}
+.listIncSelect li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.listIncSelect li a {
+	display: block;
+	margin: 0 2px;
+	text-align: center;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+/****************** リスト ******************/
+
+/*** リスト一覧(カテゴリ画像表示) ***/
+.cateVisual {width: 100%;}
+.cateVisual {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+}
+.cateVisual img {max-width: 100%;margin: 0px auto;}
+
+/* リスト一覧(共通) */
+.ListBox .column {
+	width: 100%;
+	padding: 0;
+}
+/* リストタイトル */
+.ListBox .column .ListMainTitle {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0.25em 0 0.4em;
+	font-weight: normal;
+	line-height: 1.2;
+	overflow: hidden;
+}
+.ListBox .column .ListMainTitle a {text-decoration: none;}
+.ListBox .column .ListMainTitle a:hover {text-decoration: underline;}
+
+.ListBox.ListType1 .column .ListMainTitle {
+	position: relative;
+	text-align: left;
+	text-overflow: ellipsis;
+}
+.ListBox.ListType1 .column .ListMainTitle::before,
+.ListBox.ListType1 .column .ListMainTitle::after {
+	content: '...';
+	line-height: 1;
+	position: absolute;
+	right: 0;
+	top: 2em;
+	-ms-wrap-flow: start;
+}
+.ListBox.ListType1 .column .ListMainTitle::after {
+	background: currentColor;
+	color: white;
+	top: auto;
+}
+@supports (-webkit-line-clamp: 2) {
+	.ListBox.ListType1 .column .ListMainTitle {
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+	}
+	.ListBox.ListType1 .column .ListMainTitle::before,
+	.ListBox.ListType1 .column .ListMainTitle::after {
+		content: normal;
+  }
+}
+/* リストディスクリプション */
+.ListBox .column .distxt {
+	padding-top: 15px;
+	font-weight: normal;
+}
+.ListBox.ListType1 .column .distxt {}
+
+/* リストビュー数等アイコン */
+.ListBox .rank_date_area {margin: 15px auto 0 auto;padding: 5px 0;}
+.ListBox .column p.view,
+.ListBox .column p.like,
+.ListBox .column p.comment {
+	float: left;
+	font-weight: bold;
+	margin: 5px 0;
+	padding: 1px 10px 0 30px;
+}
+.ListBox .column p.ico {float: right;padding: 0;}
+.ListBox .column p.cap {float: right;padding: 5px 0;}
+
+/* リスト記事投稿者 */
+.ListBox .column .person {padding: 10px 0;}
+.ListBox .column .person .person_ph {padding: 0;}
+.ListBox .column .person .person_ph img {width:100%;border-radius: 3px;}
+.ListBox .column .person .person_ph figure {float: left;}
+.ListBox .column .person .person_ph .name_area {float: left;padding: 0 10px;line-height: 1.2;}
+
+.ListBox .column p.txt,
+.ListBox .column .person .prof {
+	max-height: 5.2em;
+	line-height: 1.6;
+	overflow: hidden;
+	position: relative;
+	text-align: left;
+	text-overflow: ellipsis;
+	width:100%;
+	margin:auto;
+}
+.ListBox .column p.txt::before,
+.ListBox .column p.txt::after,
+.ListBox .column .person .prof::before,
+.ListBox .column .person .prof::after {
+	content: '...';
+	line-height: 1;
+	position: absolute;
+	right: 0;
+	top: 3em;
+	-ms-wrap-flow: start;
+}
+.ListBox .column p.txt::after,
+.ListBox .column .person .prof::after {
+	background: currentColor;
+	color: white;
+	top: auto;
+}
+@supports (-webkit-line-clamp: 3) {
+	.ListBox .column p.txt,
+	.ListBox .column .person .prof {
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+	}
+	.ListBox .column p.txt::before,
+	.ListBox .column p.txt::after,
+	.ListBox .column .person .prof::before,
+	.ListBox .column .person .prof::after {
+		content: normal;
+  }
+}
+/* リストタグ */
+.ListBox .column .tagLink {padding: 5px 0;}
+.ListBox .column .tagLink li {list-style: none;float: left;margin-bottom: 10px;margin-right: 4px;}
+.ListBox .column .tagLink a {
+	margin: 0;
+	padding: 0 10px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	min-height: 1.7rem;
+}
+/* リストカテゴリアイコン */
+.ListBox.ListType1 .column ul.cateName,
+.ListBox.ListType3 .column ul.cateName {padding: 10px 0 0 0;}
+.ListBox.ListType1 .tpl-flexcolumn4 .column ul.cateName {height: 40px;overflow: hidden;}
+.ListBox.ListType2 .column ul.cateName,
+.ListBox.ListType4 .column ul.cateName {padding: 0 0 5px 0;}
+.ListBox .column ul.cateName,
+.ListBox.ListType3 ul.cateName {list-style: none;}
+.ListBox .column ul.cateName li,
+.ListBox.ListType3 ul.cateName li {float: left;padding: 0 5px 5px 0;}
+.ListBox .column ul.cateName span.cateIco,
+.ListBox.ListType3 ul.cateName span.cateIco {
+	margin: 0;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+/* リストランキング */
+.ListBox .column .rankIco {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 12px;
+	color: var(--app-main-c-txt);
+	background: var(--app-main-cr-c);
+}
+/* 1行リスト */
+.tpl-1st-block {}
+.tpl-1st-block dl {padding: 15px 0;}
+.ListType3 .tpl-1st-block {padding: 0;position: relative;line-height: 1.4;}
+.ListType3 .tpl-1st-block dt {}
+.ListType3 .tpl-1st-block dd {}
+.ListType3 dt.time {padding: 0 0 0 15px;}
+.ListType3 dd.ico {position: absolute;top: 15px;right: 0;padding: 2px 0px 10px 10px;}
+.ListType3 dd.title_area {padding: 5px 15px;}
+.ListType3 dd.title_area p.title {}
+.ListType3 dd.title_area p.title a {text-decoration: none;}
+.ListType3 dd.title_area p.title a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;}
+.ListType3 dd.title_area p.txt {padding: 10px 0;}
+
+/* 商品・セミナー詳細項目リスト */
+
+/* 個別項目一覧概要 */
+.ListSubhDet {margin: 10px auto;padding: 0;}
+.ListSubhDet dl {margin: 0 auto;padding: 5px 0;}
+.ListSubhDet dt {float: left;}
+.ListSubhDet dd {float: left;}
+
+/****************** コメント・掲示板要素 ******************/
+
+/* 掲示板トップ一覧 */
+.board_Box {margin: 0 auto;padding: 0;}
+.board {margin: 0; auto;padding: 0;}
+
+/* 記事コメント */
+.commentBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.commentBox h3 {margin: 0 auto;padding: 10px;}
+.board .commentBox {width: 100%;margin: 40px auto;}
+
+
+
+/* トピックス新規登録フォーム */
+.NewTpiInput {}
+
+/* コメント等共通設定 */
+.commentInput {margin: 0 auto;}
+.commentForm {margin: 0 auto;padding: 5px 0;}
+.commentBT {}
+.commentList {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.commentZero {margin: 0 auto;}
+.commentFst {margin: 10px auto 0 auto;}
+
+.commentPh {
+	float: left;
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	border-radius: 50%;
+}
+.commentPh img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: auto;
+}
+.commentTxtArea {width: 100%;}
+.commentNameArea {padding: 5px 10px;}
+.commentNameInn {float: right;text-align: right;}
+
+.commentName {font-weight: normal;}
+.commentName span.commentNameS {}
+.commentTime {}
+.commentTxtRes {padding: 20px 10px 0 10px;}
+.commentTxt {padding: 20px 10px;}
+.commentResArea {}
+
+.commentResL {float: left;}
+.commentResR {float: right;}
+.commentResBT {float: left;margin: 0 2px;}
+
+/* 掲示板(基本) */
+.boardList {}
+
+/* 掲示板(トピックス) */
+.boardListLink {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.boardListProf {margin: 0 auto;padding: 5px 5px 15px 5px;}
+
+.boardListProf h2 {float: left;}
+.boardListDet {margin: 0 auto;}
+
+/* 掲示板機能 */
+.boardArea {margin: 0 auto;padding: 0;}
+.board_topicsBox {margin: 0 auto;padding: 20px 0;}
+.board_topicsBox h1 {
+	margin: 0 auto;
+	padding: 20px 20px 40px 20px;
+	text-align: left;
+}
+/* 掲示板トピックス投稿 */
+.boardInput {
+	margin: 0 auto;
+	padding: 10px 0 50px 0;
+}
+
+/****************** ログイン・新規会員登録要素 ******************/
+
+/* ログイン枠 */
+.login_det_Box {
+	margin: 0 auto;
+	padding: 30px 15px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+/* ログイン情報 */
+.member_info {
+	display: flex;
+	padding: 5px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.member_info .member_info_thumbnail {
+	overflow: hidden;
+	position: relative;
+	border-radius: 50%;
+}
+.member_info .member_info_thumbnail img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: auto;
+}
+/* ログイン情報(プルダウン型) */
+.member_info_pd {
+	display: flex;
+	padding: 0;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.member_info_pd ul {list-style: none;}
+.member_info_pd li {
+    width: 200px;
+	display: block;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.member_info_pd li:hover {}
+
+.member_info_pd .member_info_thumbnail {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	border-radius: 50%;
+}
+.member_info_pd .member_info_thumbnail img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: auto;
+}
+.member_info_pd_txt {
+	display: inline-block;
+	margin-top: 2px;
+	margin-left: 10px;
+	padding: 0;
+	line-height: 1.0;
+	vertical-align: top;
+}
+.member_info_pd_txt .LoginName {}
+.member_info_pd_txt .LoginCourse {width: 100px;}
+
+.member_info_pd_menu {
+    width: 200px;
+    display: none;
+    position: absolute;
+    margin-left: -10px;
+    margin-top: 6px;
+    padding: 0;
+    z-index: 10;
+}
+.member_info_pd_menu li{}
+.member_info_pd_menu li a{
+    padding: 10px 5px;
+    margin: 0;
+    display: block;
+}
+/*FMCアイコン*/
+.fmcicon {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+}
+.fmcicon svg {
+	width: 20px;
+	height: 20px;
+}
+.granted svg {}
+.fmcicon .ban {display: none;}
+.fmcicon.denied .ban {display: block;position: absolute;top:0;bottom:0;left:-0;right:0;margin: auto;}
+.member_info .fmcicon.denied .ban {top: 8px;}
+.member_info_pd .fmcicon.denied,
+.member_info_pd .fmcicon.default,
+.member_info_pd .fmcicon.granted {right: 0;top: -5px;}
+#fmctxt {display:none;}
+#fmctxt::before{
+	content: "";
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 0;
+	width: 0;
+	border: 3px solid transparent;
+}
+.granted #fmctxt::before{}
+.fmcicon:hover #fmctxt {
+	position: absolute;
+	right: calc(100% + 8px);
+	top: 50%;
+	transform: translateY(-50%);
+	white-space: nowrap;
+	display: block;
+	padding: 4px 10px;
+	border-radius: 4px;
+}
+.fmcicon.granted:hover #fmctxt {}
+
+/* プッシュ通知ボタン */
+ul.pwa_pushBt {list-style: none;padding: 5px}
+ul.pwa_pushBt li a{
+    margin: 0;
+    padding: 15px;
+    display: block;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+/****************** 入力フォーム箇所 ******************/
+
+/* フォーム縦並び */
+.InputFormT dl {margin: 0 auto;padding: 0 0 10px 0;}
+.InputFormT dt {padding: 8px 8px;}
+.InputFormT dd {padding: 0;}
+
+/* ステップ */
+.step_flow {margin: 0 auto 20px auto;padding: 0;}
+.step_flow ul {
+	margin: 0 auto;
+	padding: 0;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+}
+.step_flow li {width: 100%;padding: 10px 0;text-align: center;}
+
+/* 新規会員登録枠 */
+.newreg_det_Box {
+	margin: 0 auto;
+	padding: 30px 15px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+/* 入力フォーム項目 */
+.InputForm dl {margin: 0 auto;padding: 15px 0;}
+.InputForm dt {padding: 10px 0 5px 8px;}
+.InputForm dd {padding: 0;}
+.InputForm dd .chpd {padding: 10px 0 0 0;}
+.InputForm dd li {list-style: none;}
+
+/****************** マイページ要素 ******************/
+
+/* マイページ枠 */
+.mypage_Box {margin: 0 auto;}
+
+/* マイページ(基本) */
+.mypage {margin: 0 auto;padding: 0;}
+.mypageDet,
+.mypageInput {
+	padding: 10px 20px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.mypageDet dl {margin: 0 auto;padding: 10px 0;}
+.mypageDet dt {padding: 5px;}
+.mypageDet dd {padding: 5px;}
+
+/* ファイルアップロード */
+.FileUpImg {margin: 10px auto;padding: 0px;}
+.FileUpImg img {border-radius: 2px;}
+.FileUpName {
+	margin: 10px auto;
+	padding: 10px;
+	border: 1px solid var(--app-main-brd);
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	font-size: 12px;
+	text-align: center;
+}
+/* マイページ(プロフ写真エリア) */
+.myPhoto {margin: 0 auto;padding: 0;}
+.myPhoto .photoArea {
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.myPhoto .photoArea img {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.myPhoto p.myName {
+	margin: 0 auto;
+	padding: 5px;
+	text-align: center;
+}
+
+/* マイページナビ */
+.mypagenav {
+	margin: 40px auto;
+	padding: 0;
+}
+.mypagenav ul {margin: 0 auto;padding: 0 10px;}
+.mypagenav li {
+	margin: 0 auto;
+	padding: 8px 5px;
+	list-style: none;
+}
+.mypagenav a {
+	text-decoration: none;
+	padding: 0 30px;
+	display: block;
+}
+
+/* マイページ各種購入表示 */
+.ordDetBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.ordDetBox .ordDetTi {width:100%;}
+
+.ordDetBox table {
+	width:100%;
+	text-align: left;
+}
+.ordDetBox th {}
+.ordDetBox td {}
+.ordDetBox table li {list-style: none;}
+
+/****************** 個別パーツ ******************/
+
+/* コピーライト */
+#footer .copy {padding: 10px 0;text-align: center;}
+#footerSub .footer_privacy{text-align: right;}
+/* アドレス指定 */
+address {
+	padding: 20px;
+	font-style:normal;
+	font-weight:normal;
+	color: var(--app-main-txt-u);
+}
+address a {color: var(--app-main-txt-u);}
+address p.logo {margin: 0 auto 20px auto;}
+address p.logo img {max-width: 100%;}
+address p.contactBt a {
+	display: block;
+	margin: 20px 0;
+	padding: 10px;
+	text-align: center;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+address p.contactBt a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;}
+
+/* カテゴリ表記設置 */
+ul.DetcateName {margin: 0 auto 0.5em;padding: 10px 0 0 0;list-style: none;}
+ul.DetcateName li {float: left;padding: 0 5px 0 0;}
+ul.DetcateName span.DetcateIco {margin: 0;padding: 5px 10px;border-radius: 3px;}
+
+/* タグ表記設置 */
+.detTagLink {display:block;font-size: 12px;margin: 0 auto 0.5em;}
+
+/* 閲覧数・コメント・いいね数・日付表示 */
+.rank_date_c_area {
+	margin: 0 auto;
+	padding: 15px 0;
+}
+.rank_date_c_area p.view,
+.rank_date_c_area p.like,
+.rank_date_c_area p.comment {
+	float: left;
+	padding: 1px 10px 0 35px;
+}
+.rank_date_c_area p.cap {float: right;padding: 5px 0;}
+
+/* サイト内いいね機能 */
+.siteShareBox,
+.siteFavoriteBox{margin: 0 0;padding: 10px 5px;}
+.siteShareInn {float: right;}
+
+/* いいねボタン設置 */
+.siteShare,
+.BrdSiteAcs,
+.BrdSiteShare,
+.BrdSiteRes,
+.siteShareNo {
+	float: left;
+	margin: 0 2px;
+}
+.siteShare a,
+.siteShare span,
+.siteFavorite a,
+.BrdSiteShare span,
+.BrdSiteRes span,
+.BrdSiteAcs span {
+	display: block;
+	padding: 5px 20px 5px 40px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	font-weight: bold;
+}
+.siteShareNo {
+	padding: 5px 20px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	font-weight: bold;
+}
+
+/* 記事投稿者 */
+.authorBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.authorBox .authorPhoto {float:left;width:20%;}
+.authorBox .authorPhoto img {width:85%;border-radius: 3px;}
+.authorBox .authorDetail {float:right;width:80%;}
+
+/* SNSシェア設置 */
+#SNSboxArea {
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.shareList {
+	list-style:none;
+	display: flex;
+    justify-content: flex-end;
+	flex-wrap:wrap;
+	margin:0 auto;
+	padding: 0 0 20px 0;
+}
+.shareList__item {
+    flex-grow: 1;
+	height:20px;
+	line-height:40px;
+	min-width:30px;
+	text-align:center;
+}
+.shareList__link {
+	display:block;
+	text-decoration: none;
+	margin: 0 2px;
+}
+.shareList__link::before{
+	display:block;
+	transition: ease-in-out .2s;
+}
+.shareList__link:hover::before{
+	transform: scale(1.2);
+	box-shadow:1px 1px 4px 0px rgba(0,0,0,0.15);
+}
+
+/* クレジット情報 */
+.cardBland,
+.cardSec,
+.cardAgt {margin: 0 auto;padding: 0;}
+.cardBland ul {padding: 0 20px;}
+.cardBland li,
+.cardSec p {float: left;padding: 5px;list-style: none;}
+.cardAgtName,
+.cardAgtName {padding: 20px;}
+.cardAjx {margin: 20px auto;padding: 0;text-align: center;}
+
+/* ラジオボタン選択ボタン化 */
+.radio-toggle {display: flex;}
+.radio-toggle label {display: flex;position: relative;margin: 5px 2px;}
+.radio-toggle [type=radio] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 5px;
+	outline: none;
+}
+.radio-toggle.wOnly {
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* appearance: none; for IE11 */
+_:-ms-lang(x)::-ms-backdrop, .radio-toggle [type=radio] {visibility: hidden;}
+.radio-toggle .toggle-button {z-index: 1;}
+.radio-toggle :disabled + .toggle-button {cursor: not-allowed;opacity: .6;}
+.toggle-button {
+	display: block;
+	padding: 7px 20px;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+}
+.toggle-button.wFixed {
+	width: 100%;
+}
+.toggle-button:hover {opacity: .8;}
+.toggle-button:disabled {cursor: not-allowed;opacity: .6;color: #fff;}
+
+/* タイトル箇所設置戻るボタン */
+.mtiBkBt a {
+    color: var(--app-main-txt-a);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+}
+.mtiBkBt a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+
+/****************** 検索部分 ******************/
+
+/* フリーワード検索（基本） */
+.search_container {
+	position: relative;
+	box-sizing: border-box;
+	display: block;
+	padding: 5px 10px;
+	border-radius: 3px;
+	width: 100%;
+	overflow: hidden;
+}
+.search_container input[type="text"]{border: none;width: 100%;height: 2.0em;}
+.search_container input[type="text"]:focus {outline: 0;}
+.search_container input[type="submit"]{
+	cursor: pointer;
+	border: none;
+	position: absolute;
+	width: 4.5em;
+	height: 3.2em;
+	right:-5px;
+	top: -5px;
+	outline : none;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+/* 検索等のボタン */
+.SearchBT a {text-decoration: none;font-weight: bold;}
+.SearchBT a,
+.SearchBT span,
+.DlPushBT a,
+.DlPushBT span {
+	padding: 8px 15px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.SearchBT a.clear_btn {}
+.SearchBT a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+
+/* タグ検索 */
+.tagSearch {}
+.tagSearchTi {
+	margin: 20px auto 0 auto;
+	padding: 10px;
+	text-align: left;
+}
+.tagSearchInn {
+	position: relative;
+	margin: 0 auto;
+	padding: 10px;
+}
+.tagSearch ul {list-style: none;}
+
+.grad-btn {
+	z-index: 3;
+	position: absolute;
+	right: 0;
+	bottom: -40px;
+	left: 0;
+	width: 200px;
+	margin: auto;
+	padding: 5px 0;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	transition: .2s ease;
+}
+.grad-btn::before{
+	content:attr(data-open);
+}
+.tagSearch ul.tagLink {
+	position: relative;
+	overflow: hidden;
+	height: 100px;
+}
+.tagSearch ul.tagLink::before {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	content: "";
+}
+.grad-trigger {display: none;}
+.grad-trigger:checked ~ .grad-btn::before {content: attr(data-close)}
+.grad-trigger:checked ~ .tagLink {height: auto;}
+.grad-trigger:checked ~ .tagLink::before {display: none;}
+.tagSearch .tagLink li,.detTagLink li {
+	list-style: none;
+	float: left;
+	margin-bottom: 4px;
+	margin-right: 4px;
+}
+.tagSearch .tagLink a,.detTagLink a {
+	margin: 0;
+	padding: 0 10px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	min-height: 1.5rem;
+}
+/****************** 基本タイトルセット ******************/
+
+/* メインタイトル（主にカテゴリタイトルで使用） */
+.main_ti {
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: center;
+}
+.mtiBkBtArea {position: relative;margin: 0 auto;}
+.mtiBkBt {position: absolute;top: -20px;left: 0;}
+
+/* コンテンツタイトル（コンテンツ・セミナー・商品のメインタイトル） */
+h1.det_ti {
+	margin: 0 auto;
+	padding: 20px 20px 40px 20px;
+	text-align: left;
+}
+/* コンテンツタイトル（主にログイン等で使用） */
+h2.sys_ti,
+h3.sys_ti {
+	margin: 0 auto 20px auto;
+	padding: 20px 0;
+	text-align: center;
+}
+/* コンテンツタイトル（主に購入画面等で使用） */
+h2.fotm_ti,
+h3.fotm_ti {
+	margin: 0 auto;
+	padding: 10px;
+}
+/* 装飾タイトル（上下罫線） */
+.BrdHTi {}
+
+/* 装飾タイトル（下矢印） */
+h2.arwTi,
+h3.arwTi {}
+h2.arwTi span,
+h3.arwTi span {}
+
+/* 装飾タイトル（左・下罫線） */
+h2.bdrTi,
+h3.bdrTi {}
+
+/****************** レイアウトインナー部分 ******************/
+/* ヘッダー枠 */
+.header_innT,
+.header_innM,
+.header_innU,
+.header_innST {margin: 0 auto;padding: 0;}
+.header_innTL,
+.header_innML,
+.header_innUL,
+.header_innSTL {float: left;}
+.header_innTR,
+.header_innMR,
+.header_innUR,
+.header_innSTR {float: right;}
+.header_innTM,
+.header_innMM,
+.header_innUM,
+.header_innSTM {margin: 0 auto;}
+
+/* ヘッダーサブ枠 */
+.headerSub_innT,
+.headerSub_innM {margin: 0 auto;padding: 0;}
+.headerSub_innTL,
+.headerSub_innML {float: left;}
+.headerSub_innTR,
+.headerSub_innMR {float: right;}
+.headerSub_innTM,
+.headerSub_innMM {margin: 0 auto;}
+
+/* フッターサブ枠 */
+.footerSub_innT,
+.footerSub_innM {margin: 0 auto;padding: 0;}
+.footerSub_innTL,
+.footerSub_innML {float: left;}
+.footerSub_innTR,
+.footerSub_innMR {float: right;}
+.footerSub_innTM,
+.footerSub_innMM {margin: 0 auto;}
+
+/* フッター枠 */
+.footer_innT,
+.footer_innM,
+.footer_innU,
+.footer_innST {margin: 0 auto;padding: 0;}
+.footer_innTL,
+.footer_innML,
+.footer_innUL,
+.footer_innSTL {float: left;}
+.footer_innTR,
+.footer_innMR,
+.footer_innUR,
+.footer_innSTR {float: right;}
+.footer_innTM,
+.footer_innMM,
+.footer_innUM,
+.footer_innSTM {margin: 0 auto;}
+
+/* ===================================================================================
+for SP max-width: 480px
+=================================================================================== */
+@media screen and (max-width: 480px) {
+
+	/* ヘッダー枠 */
+	.header_innTL,
+	.header_innML,
+	.header_innUL,
+	.header_innSTL {float: none;}
+	.header_innTR,
+	.header_innMR,
+	.header_innUR,
+	.header_innSTR {float: none;}
+
+
+	/* ヘッダーサブ枠 */
+	.headerSub_innTL,
+	.headerSub_innML {float: none;}
+	.headerSub_innTR,
+	.headerSub_innMR {float: none;}
+
+	/* フッターサブ枠 */
+	.footerSub_innTL,
+	.footerSub_innML {float: none;}
+	.footerSub_innTR,
+	.footerSub_innMR {float: none;}
+
+	/* フッター枠 */
+	.footer_innTL,
+	.footer_innML,
+
+	.footer_innUL,
+	.footer_innSTL {float: none;}
+	.footer_innTR,
+	.footer_innMR,
+	.footer_innUR,
+	.footer_innSTR {float: none;}
+
+	/* リストカテゴリアイコン */
+	.ListBox .column ul.cateName li,
+	.ListBox.ListType3 ul.cateName li {float: left;padding: 0 3px 3px 0;}
+	.ListBox .column ul.cateName span.cateIco,
+	.ListBox.ListType3 ul.cateName span.cateIco {padding: 5px;}
+
+	/* メインタイトル（主にカテゴリタイトルで使用） */
+	.main_ti {padding: 15px 0;}
+
+	/* コンテンツタイトル（コンテンツ・セミナー・商品のメインタイトル） */
+	h1.det_ti {padding: 20px;}
+
+}

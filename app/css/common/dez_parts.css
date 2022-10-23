@@ -1,0 +1,840 @@
+@charset "utf-8";
+/***************************************************
+information
+  filename : common_parts.css;
+***************************************************/
+
+/****************** フォント指定 ******************/
+body {font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;}
+.breakall {word-wrap: break-word;}
+
+/****************** カラー指定 ******************/
+/* ベースレイアウト */
+body {color: var(--app-basic-txt);background: var(--app-bg-cr);}
+#header {background: var(--app-header-cr);}
+#headerSub {border-top: 1px solid var(--app-main-brd-a);border-bottom: 1px solid var(--app-main-brd-a);}
+#contents {}
+#main {}
+#footerSub {}
+#footer {background: var(--app-footer-cr);}
+
+.login_detail #contents,
+.rmd_detail #contents,
+.newreg_detail #contents,
+.sem_ord #contents,
+.prd_ord #contents,
+.popup {background: var(--app-main-cr-a);}
+.BoxBg {padding: 5px 0;background: var(--app-main-cr-a);}
+
+/* 枠ボックス */
+.comBox {border: 1px solid  var(--app-main-brd-a);background: var(--app-main-cr-u);}
+.comBoxInn {border: 1px solid  var(--app-main-brd);background: var(--app-main-cr-u);}
+
+/*** ヘッダー ***/
+.scroll-fix {background: var(--app-header-cr);box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);}
+
+/* サブナビ(ヘッダー) */
+#header .snavi a {color: var(--app-sbnv-txt);}
+#header .snavi a.crt:before,
+#header .snavi a:after,
+#header .snavi a.crt:after,
+#header .snavi a:hover:before,
+#header .snavi a:hover:after {border-bottom: 1px solid var(--app-main-cr-c);}
+
+/* サブナビ(ドロワー) */
+.drSnavi .snavi li {
+	border-bottom: 1px solid var(--app-main-brd-a);
+	background: var(--app-main-cr);
+}
+.drSnavi .snavi li a {color: var(--app-main-txt);}
+
+/* グローバルナビ */
+#header .gnavi {background: var(--app-glnv-cr);}
+#header .gnavi li {border-left: 1px solid var(--app-main-brd);}
+#header .gnavi a {color: var(--app-glnv-txt);}
+#header .gnavi li:last-child {border-right: 1px solid var(--app-main-brd);}
+#header .gnavi a span,
+#header .gnavi a.crt span {background:var(--app-main-cr-c);}
+
+/* グローバルナビ(シンプル) */
+#header .gnavis a {color: var(--app-glnv-txt-c);}
+
+/* 会員ナビ */
+.mem_login a {background: var(--app-main-cr);color: var(--app-main-txt);}
+.new_reg a {background: var(--app-main-cr-c);color: var(--app-main-c-txt);}
+.mem_mypage a {background: var(--app-main-cr);color: var(--app-main-txt);}
+.mem_logout a {background: var(--app-main-cr-c);color: var(--app-main-txt);}
+.mem_cart a {background: var(--app-main-cr-c);color: var(--app-main-txt);}
+
+/*** フッター ***/
+/* フッターナビ */
+#footer .fnavi a {color: #fff;}
+#footer .fnavi a:before {border-top: solid 1px #fff;border-right: solid 1px #fff;}
+
+/* コピーライト */
+#footer .copy {color: var(--app-copy-txt);background: var(--app-copy-cr);}
+
+/*** パーツ部分 ***/
+/* ページトップボタン */
+.pagetop a {color: var(--app-main-txt);background-color: var(--app-main-cr);}
+
+/* ドロワメニュー */
+.drbtn{color: var(--app-main-cr-b);}
+.hambarg{background: var(--app-main-cr-b);}
+.drawer,
+.modal-search{background-color: var(--sp-slnavi-cs);border-left:1px solid var(--app-main-brd);}
+
+/* アコーディオンメニュー */
+.widget h2 {background: var(--app-main-cr);color: var(--app-main-txt);}
+.widget li a {color: var(--main-txt);background: var(--app-main-cr-u);}
+.widget li .btn {border-left:1px solid var(--app-main-brd);background: var(--app-main-cr-a);}
+
+/* パンくずリンク */
+.pan_link {background: var(--app-bg-cr);}
+.pan_link li {color: var(--app-main-txt-a);}
+.pan_link a {color: var(--app-main-txt-a);}
+
+/* ページナンバーナビ */
+.PageNum_link a {color: var(--app-basic-txt);background: var(--app-bg-cr);border: 2px solid var(--app-main-cr);}
+.PageNum_link a.crt,
+.PageNum_link a:hover {color: var(--app-main-txt);background: var(--app-main-cr);}
+
+/* リスト一覧 */
+.cateVisual {margin: 0 auto 30px auto;background: #363636;}/* リスト一覧(カテゴリ画像表示) */
+.ListBox .column h3 a {color: var(--app-basic-txt);}/* リストタイトル */
+.ListBox figure.image {border: 1px solid var(--app-main-brd);}/* リスト画像 */
+.ListBox .rank_date_area {border-top: 1px dotted var(--app-main-brd);}/* リストビュー数等アイコン */
+.ListBox .column p.cap {color: var(--app-basic-txt);}/* リスト公開日 */
+.ListBox.ListType3 ul.cateName span.cateIco {color:#fff;}/* リストカテゴリアイコン */
+.ListBox .column .rankIco {color: var(--app-main-c-txt);background: var(--app-main-cr-c);}/* リストランキング */
+.ListBox .column p.like,
+.rank_date_c_area p.like {background: url(../../core_sys/common/images/sys/share_ico.png) 6px center / contain no-repeat;}
+.ListBox .column p.comment,
+.rank_date_c_area p.comment {background: url(../../core_sys/common/images/sys/res_ico.png) 6px center / contain no-repeat;}
+.ListBox .column p.view,
+.rank_date_c_area p.view {background: url(../../core_sys/common/images/sys/acs_ico.png) 6px center / contain no-repeat;}
+
+/* 個別項目一覧概要 */
+.ListSubhDet dl {border-bottom: 1px solid var(--app-main-brd-a);}
+.ListSubhDet .sem_kinagaku dd,
+.ListSubhDet .prd_kinagaku dd {text-align: right;}
+
+/* 1行リスト */
+.tpl-1st-block dl {border-bottom: 1px dotted var(--app-main-brd);}
+.ListType3 .tpl-1st-block {background: var(--app-bg-cr);}
+.ListType3 dd.title_area p.title a {color: var(--app-basic-txt);}
+.ListType3 dd.title_area p.txt {color: var(--app-basic-txt);}
+
+/* カテゴリナビスライダー */
+.catenavSl {background: var(--app-main-cr-a);}
+.catenavSl ul {background: var(--app-main-cr-a);}
+.catenavSl ul::-webkit-scrollbar-track {background: var(--app-main-cr-a);}
+.catenavSl ul::-webkit-scrollbar-thumb{background: var(--app-main-cr);}
+.catenavSl li a {color: var(--app-basic-txt);border-left: 1px solid var(--app-main-brd);}
+.catenavSl li.crt a,
+.catenavSl li a.crt {color: var(--app-main-txt);background: var(--app-main-cr);}
+.catenavSl li:last-child {border-right: 1px solid var(--app-main-brd);}
+
+/* カテゴリナビ横 */
+.catenavY li a {border: 1px solid var(--app-main-brd);color: var(--app-basic-txt);background: var(--app-bg-cr);}
+.catenavY li a.crt,
+.catenavY li a:hover {color: var(--app-main-txt);background: var(--app-main-cr);}
+
+/* カテゴリナビ縦 */
+.catenav li a{color: var(--main-txt);border: 1px solid var(--app-main-brd);}
+.catenav li a.crt,
+.catenav li a:hover {color: var(--app-main-txt);background: var(--app-main-cr);}
+
+/* ラジオボタンタブ */
+label.tab_item {border: 1px solid var(--app-main-brd);background: var(--app-main-cr-u);}
+.selectBt input[type="radio"]:checked + label.tab_item {background: var(--app-main-cr);color: var(--app-main-txt);}
+
+/* 表示形式選択 */
+.listIncSelect li a {border: 1px solid var(--app-main-brd);color: var(--app-basic-txt);}
+.listIncSelect li.crt a,
+.listIncSelect li a:hover {color: var(--app-main-txt);text-decoration: none;}
+
+.listIncSelect li.thumli a {background: url("../../core_sys/common/images/sys/thumbnail_ico.png") 8px center no-repeat #fff;}
+.listIncSelect li.txtli a {background: url("../../core_sys/common/images/sys/txtlist_ico.png") 8px center no-repeat #fff;}
+.listIncSelect li.thumli.crt a,
+.listIncSelect li.thumli a:hover {background: url("../../core_sys/common/images/sys/thumbnail_ico_w.png") 8px center no-repeat #191919;}
+.listIncSelect li.txtli.crt a,
+.listIncSelect li.txtli a:hover {background: url("../../core_sys/common/images/sys/txtlist_ico_w.png") 8px center no-repeat #191919;}
+
+/* コメント・掲示板要素 */
+.commentBox {background: var(--app-main-cr-u);}
+.boardListLink {background: var(--app-main-cr-u);}
+.board_topicsBox h1 {color: var(--app-basic-txt);}
+
+/****************** コメント・掲示板要素 ******************/
+
+/* 記事コメント機能 */
+.commentBox h3 {border-bottom: 1px solid var(--app-main-brd);}
+
+/* 記事コメント/掲示板共通 */
+.commentList {border: 1px solid var(--app-main-brd);}
+.commentZero {background: var(--app-main-cr-ar);}
+.commentSec {background: var(--app-main-cr-a);}
+
+.commentNameArea {border-bottom: 1px dotted var(--app-main-brd);}
+.commentResArea {border-top: 1px dotted var(--app-main-brd);}
+
+/* 掲示板トップ一覧 */
+.boardListLink {border: 1px solid var(--app-main-brd);}
+.boardListProf {border-bottom: 1px dotted var(--app-main-brd);}
+
+/****************** ログイン・新規会員登録要素 ******************/
+
+/* ログイン情報 */
+.member_info {
+	border: 1px solid  var(--app-main-brd);
+	background: var(--app-main-cr-a);
+}
+
+/* ログイン情報(プルダウン型) */
+.member_info_pd {
+	border: 1px solid  var(--app-main-brd);
+	background: var(--app-main-cr-a);
+}
+.member_info_pd li:hover {background: #eee;}
+.member_info_pd_menu {background: #fff;border: 1px solid  var(--app-main-brd);}
+.member_info_pd_menu li{border-bottom: 1px solid  var(--app-main-brd);}
+.member_info_pd_menu li a{color: #000;}
+
+/*FMCアイコン*/
+.fmcicon svg {fill: rgb(75,75,75);}
+.granted svg {fill: #fdd221;}
+.fmcicon.denied .ban {fill: #ba000f;}
+#fmctxt::before{border-left: 6px solid #ba000f;}
+.granted #fmctxt::before{border-left: 6px solid #fdd221;}
+.fmcicon:hover #fmctxt {background: #ba000f;color:#fff;}
+.fmcicon.granted:hover #fmctxt {background: #fdd221;}
+
+/* プッシュ通知ボタン */
+ul.pwa_pushBt li a{color: #000;border: 1px solid var(--app-main-brd);}
+
+/****************** 入力フォーム箇所 ******************/
+/* ステップ */
+.step_flow {background: var(--app-main-cr-u);}
+.step_flow li {
+	border-left: 1px solid var(--app-main-brd);
+	background: var(--app-main-cr-u);
+}
+.step_flow li:last-child {border-right: 1px solid var(--app-main-brd);}
+.step_flow li.crt {background: var(--app-main-cr-a);}
+
+/*** 入力フォーム項目 ***/
+.InputForm dl {border-bottom: 1px dotted  var(--app-main-brd);}
+
+/****************** マイページ要素 ******************/
+
+/* マイページ(基本) */
+.mypageDet,
+.mypageInput {border: 1px solid  var(--app-main-brd);}
+.mypageDet dl {
+	margin: 0 auto;
+	padding: 10px 0;
+	font-size: 14px;
+	border-bottom: 1px solid  var(--app-main-brd-a);
+}
+/* ファイルアップロード */
+.FileUpName {border: 1px solid var(--app-main-brd);}
+
+
+/* マイページナビ */
+.mypagenav li {border-bottom: 1px dotted  var(--app-main-brd);}
+.mypagenav a {color: var(--app-basic-txt);}
+.mypagenav a.mypagetop {background: url("../../core_sys/common/images/sys/mypagetop.png") left center no-repeat;}
+.mypagenav a.mypageinfo {background: url("../../core_sys/common/images/sys/mypageinfo.png") left center no-repeat;}
+.mypagenav a.mypageprof {background: url("../../core_sys/common/images/sys/mypageprof.png") left center no-repeat;}
+.mypagenav a.mypageservice {background: url("../../core_sys/common/images/sys/mypageservice.png") left center no-repeat;}
+.mypagenav a.mypageseminar {background: url("../../core_sys/common/images/sys/mypageseminar.png") left center no-repeat;}
+.mypagenav a.mypageproduct {background: url("../../core_sys/common/images/sys/mypageproduct.png") left center no-repeat;}
+.mypagenav a.mypagecontact {background: url("../../core_sys/common/images/sys/mypagecontact.png") left center no-repeat;}
+.mypagenav a.mypagepost {background: url("../../core_sys/common/images/sys/mypagepost.png") left center no-repeat;}
+.mypagenav a.mypagebenefits {background: url("../../core_sys/common/images/sys/mypagebenefits.png") left center no-repeat;}
+.mypagenav a.mypageaffiliate {background: url("../../core_sys/common/images/sys/mypageaffiliate.png") left center no-repeat;}
+.mypagenav a.mypagepassword {background: url("../../core_sys/common/images/sys/mypagepassword.png") left center no-repeat;}
+.mypagenav a.mypagepush {background: url("../../core_sys/common/images/sys/mypagepush.png") left center no-repeat;}
+
+.mypagenav a.mypagetop,
+.mypagenav a.mypageinfo,
+.mypagenav a.mypageprof,
+.mypagenav a.mypageservice,
+.mypagenav a.mypageseminar,
+.mypagenav a.mypageproduct,
+.mypagenav a.mypagecontact,
+.mypagenav a.mypagepost,
+.mypagenav a.mypagebenefits,
+.mypagenav a.mypageaffiliate,
+.mypagenav a.mypagepassword,
+.mypagenav a.mypagepush {background-size:18px 18px;}
+
+/* マイページ各種購入表示 */
+.ordDetBox {
+	padding: 15px;
+	border: 1px solid  var(--app-main-brd);
+	background: var(--app-main-cr-u);
+}
+.ordDetBox .ordDetTiArea {
+	border: 1px solid var(--app-main-brd);
+	background: var(--app-main-cr-a);
+}
+.ordDetBox table {border: 1px solid var(--app-main-brd);}
+.ordDetBox th {
+	padding: 5px 10px;
+	border: 1px solid var(--app-main-brd);
+	background: var(--app-main-cr-a);
+}
+.ordDetBox td {
+	padding: 10px;
+	border: 1px solid var(--app-main-brd);
+	border-right: none;
+	background: var(--app-main-cr-u);
+}
+/* マイページ商品購入表示個別 */
+.ordDetBoxPrd {
+	padding: 15px;
+	border: 1px solid  var(--app-main-brd);
+	background: var(--app-main-cr-u);
+}
+/****************** お問合わせ箇所 ******************/
+
+/* お問合せ枠 */
+.contact{
+	background:#1DBCB2;
+	padding: 32px 0px;
+}
+.top .contact{
+	background:none;
+}
+/* .contact_Box {margin: 30px auto;} */
+.contact_Box {
+	margin: 30px auto;
+	padding: 48px;
+	/* border: 1px solid  var(--app-main-brd); */
+	background: #87010124;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	color:#fff;
+	text-align: center;
+}
+.contact_Box h2{
+	margin-top:16px;
+	color:#fff;
+}
+.contact_Box .btn__box{
+	display:flex;
+	justify-content: center;
+	flex-wrap:wrap;
+}
+.contact_Box .btn__box a{
+	margin:16px;
+}
+.contact_Box img{
+	max-width:720px;
+	margin:auto;
+}
+@media screen and (max-width:540px){
+	.contact_Box .btn__box{
+		display:block;
+	}
+
+}
+/****************** セミナー要素 ******************/
+
+/* セミナー用アイコン */
+.ListSubhDet span.SemIco {
+	width: 100%;
+	display: block;
+	white-space: nowrap;
+	padding: 2px 5px;
+	text-align:center;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.sem_kinagaku span.SemIco {background:#a33f3f;color: #fff;}
+.sem_kaisaibi span.SemIco {background:#9a8547;color: #fff;}
+.sem_kaisaibasyo span.SemIco {background:#4483a6;color: #fff;}
+.sem_kigen span.SemIco {background:#648b33;color: #fff;}
+.sem_aki span.SemIco {background:#666666;color: #fff;}
+
+/* セミナーカレンダー用 */
+.SchCal {margin: 0 auto;padding: 0;}
+
+/* セミナー詳細基本 */
+.sem_description {}
+.sem_report {}
+
+/* セミナー申込ボタン */
+.SemBTBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	font-weight: bold;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+	background: var(--app-main-cr-u);
+}
+.SemBTBox .btCart {margin: 20px auto;}
+
+/* セミナー基本詳細 */
+.SemDLBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+	background: var(--app-main-cr-u);
+}
+.SemDLBox dl {border-bottom: 1px solid var(--app-main-brd-a);}
+.SemDLBox .dlinner dt {width:100%;margin: 0;padding: 5px 0;}
+.SemDLBox .dlinner dd {width:100%;margin: 0;padding: 5px 0;}
+.SemDLBox dd img {max-width: 100%;}
+
+/* セミナー自由詳細 */
+.SemFLBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+	background: var(--app-main-cr-a);
+}
+.SemFLBox dl {border-bottom: 1px solid var(--app-main-brd-a);}
+
+/* セミナーURL詳細 */
+.SemURLBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+	background: var(--app-main-cr-u);
+}
+.SemURLBox dl {border-bottom: 1px solid var(--app-main-brd-a);}
+
+/****************** 商品要素 ******************/
+
+/* 商品詳細基本 */
+.prd_description {}
+.prd_report {}
+
+/* 商品カートボタンエリア */
+.PrdBTBox {
+	font-weight: bold;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+	background: var(--app-main-cr-u);
+}
+.PrdBTBox .btCart {margin: 20px auto;}/* 商品カートボタン */
+.PrdNumBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	background: var(--app-main-cr-u);
+}
+.PrdNumBox .PrdNumBoxInn {float: right;}
+.PrdNumBox .PrdNumTi,
+.PrdNumBox .PrdNumOpTi,
+.PrdNumBox .PrdNumTxt,
+.PrdNumBox .PrdNum,
+.PrdNumBox .PrdNumTxt,
+.PrdNumBox .PrdNumCtrBt,
+.PrdNumBox .PrdNumUpdBt {float: left;}
+.PrdCartOpNum,
+.PrdCartOpBt,
+.PrdCartOpKBt {float: right;}
+
+/* 商品基本詳細 */
+.PrdDLBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+}
+.PrdDLBox dl {border-bottom: 1px solid var(--app-main-brd-a);}
+
+/* 商品自由詳細 */
+.PrdFLBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+	background: var(--app-main-cr-a);
+}
+.PrdFLBox dl {border-bottom: 1px solid var(--app-main-brd-a);}
+
+/* 商品URL詳細 */
+.PrdURLBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+	background: var(--app-main-cr-u);
+}
+.PrdURLBox dl {border-bottom: 1px solid var(--app-main-brd-a);}
+
+/****************** カート要素 ******************/
+
+/* カート枠 */
+.cart_Box {margin: 0 auto 20px auto;}
+
+/* 商品カート */
+.PrdCartListBox {width: 100%;}
+.PrdCartBoxInn {
+	width: 100%;
+	margin: 0 auto 10px auto;
+	padding: 5px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	background: var(--app-main-cr-u);
+}
+.PCIDBlock {display: inline-block;vertical-align: top;}
+
+.PrdCartSBoxInn {
+	width: 100%;
+	margin: 0 auto 5px auto;
+	padding: 5px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	background: var(--app-main-cr-u);
+}
+/* 商品カート(カート) */
+.PrdCartSBox {
+	width: 100%;
+	margin: 0 auto 10px auto;
+	padding: 5px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	background: var(--app-main-cr-a);
+}
+.PrdCartSPh {width: 25%;margin: 0;padding: 0;}
+.PrdCartSDet {width: 40%;margin: 0 10px;padding: 0;}
+.PrdCartSAmt {width: 25%;margin: 0;padding: 0;}
+
+.PrdCartSPhOp {width: 25%;margin: 0;padding: 0;}
+.PrdCartSDetOp {width: 40%;margin: 0 10px;padding: 0;}
+.PrdCartSAmtOp {width: 25%;margin: 0;padding: 0;}
+
+.PrdCartSPh .PrdCartSPhDet {
+	width: 100%;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+}
+.PrdCartSPh img {width: 100%;}
+.PrdCartSDet,
+.PrdCartSDetOp {font-weight: bold;}
+.PrdCrtSNo {}
+.PrdCrtSName {}
+.PrdCartSAmt {text-align: right;font-weight: bold;}
+.PrdCartSAmt span.kingakuTxt {padding: 0 5px;}
+.PrdCartSDetOp .PrdCrtSName {padding-top: 20px;}
+
+/* 商品購入に関するボタン一式 */
+.PrdNumUpdBt a {
+	font-weight: bold;
+	display: block;
+	text-align:center;
+}
+.PrdNumCtrBt button,
+.PrdCartOpBt button {
+	margin: 0 2px;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+.PrdCrtEdBt a:hover,
+.PrdNumUpdBt a:hover {text-decoration: none;}
+
+/* カート内合計金額 */
+.PrdCartTotalBox {
+	width: 100%;
+	margin: 20px auto;
+	padding: 0;
+	font-weight: bold;
+}
+.PrdCartTotalBox table {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+.PrdCartTotalBox tr {border-bottom: 1px solid var(--app-main-brd-a);}
+.PrdCartTotalBox td {padding: 5px 5px;text-align: right;}
+.PrdCartTotalBox tr.PrdCartDelv {background: var(--app-main-cr-a);}/* 商品オプション背景 */
+
+/* 住所選択 */
+.addArea {margin: 10px auto;padding: 5px 0;}
+.addArea .addAreaInn {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+.addArea .addAreaInn .addName {border-bottom:1px dotted var(--app-main-brd);}
+.addBT a:hover {text-decoration: none;}
+
+/****************** 最終確認要素 ******************/
+
+/* 申込・購入フォーム最終確認 */
+.FChkBox {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	background: var(--app-main-cr-u);
+}
+.FChkBox dl {border-bottom: 1px solid var(--app-main-brd-a);}
+.FChkBox dl {border-bottom: 1px solid var(--app-main-brd-a);}
+.FChkBox .dlinner dt {width:100%;margin: 0;padding: 5px 0;}
+.FChkBox .dlinner dd {width:100%;margin: 0;padding: 5px 0;}
+.FChkBox dd img {max-width: 100%;}
+
+/****************** 個別パーツ ******************/
+
+/* いいねボタン設置 */
+.siteShare a {
+	background: url(../../core_sys/common/images/sys/share_ico.png) 6px center no-repeat #fff;
+	color: var(--app-basic-txt);
+	border: 1px solid var(--app-main-brd);
+}
+.siteShare span {
+	background: url(../../core_sys/common/images/sys/share_ico_n.png) 6px center no-repeat #fff;
+	color: var(--app-main-txt-dis);
+	border: 1px solid var(--app-main-brd-a);
+}
+.siteShare a.crt,
+.siteShare a:hover {
+	background: url(../../core_sys/common/images/sys/share_ico_w.png) 6px center no-repeat #ffa200;
+	color: var(--app-main-txt-u);
+	text-decoration: none;
+}
+.BrdSiteShare span {
+	background: url(../../core_sys/common/images/sys/share_ico.png) 6px center no-repeat #fff;
+	color: var(--app-basic-txt);
+	border: 1px solid var(--app-main-brd);
+}
+.BrdSiteRes span {
+	background: url(../../core_sys/common/images/sys/res_ico.png) 6px center no-repeat #fff;
+	color: var(--app-basic-txt);
+	border: 1px solid var(--app-main-brd);
+}
+.BrdSiteAcs span {
+	background: url(../../core_sys/common/images/sys/acs_ico.png) 6px center no-repeat #fff;
+	color: var(--app-basic-txt);
+	border: 1px solid var(--app-main-brd);
+}
+.siteShareNo {
+	color: var(--app-basic-txt);
+	border: 1px solid var(--app-main-brd);
+	background: var(--app-main-cr-u);
+}
+
+/* お気に入りボタン設置 */
+.siteFavorite a {
+	background: url(../../core_sys/common/images/sys/favorite_ico.png) 6px center no-repeat #fff;
+	color: var(--app-basic-txt);
+	border: 1px solid var(--app-main-brd);
+}
+.siteFavorite span {
+	background: url(../../core_sys/common/images/sys/favorite_ico_n.png) 6px center no-repeat #fff;
+	color: var(--app-main-txt-dis);
+	border: 1px solid var(--app-main-brd-a);
+}
+.siteFavorite a.crt,
+.siteFavorite a:hover {
+	background: url(../../core_sys/common/images/sys/favorite_ico_w.png) 6px center no-repeat #ffa200;
+	color: var(--app-main-txt-u);
+	text-decoration: none;
+}
+
+/* 記事投稿者 */
+.authorBox {
+	margin: 40px auto;
+	padding: 15px;
+	border: 1px solid var(--app-main-brd);
+}
+.authorBox .authorDetail p.authorDetTi {
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid var(--app-main-brd-a);
+}
+.authorBox .authorDetail p.authorDetName {
+	padding: 5px 0;
+	line-height: 1.2em;
+}
+.authorBox .authorDetail p.authorDetCorp {
+	padding: 0;
+}
+.authorBox .authorDetail p.authorDetProf {
+	padding-top: 10px;
+}
+
+/* テーブル要素共通 */
+.TableBox table {
+	width:100%;
+	text-align: center;
+}
+.TableBox th {
+	padding: 5px 10px;
+	border: 1px solid var(--app-main-brd);
+}
+.TableBox td {
+	padding: 10px;
+	border: 1px solid var(--app-main-brd);
+}
+.TableBox table.ScrTable {
+	overflow-x: scroll;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	table-layout: fixed;
+}
+
+/* SNSシェア設置 */
+#SNSboxArea {
+	width: var(--app-main-width-con);
+	border-top: 1px solid var(--app-main-brd);
+	border-bottom: 1px solid var(--app-main-brd);
+}
+.shareList {}
+.shareList__item {}
+.shareList__link {
+	color:#fff;
+	border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;
+}
+.shareList__link::before{}
+.shareList__link:hover::before{
+	background:#fff;
+	box-shadow:1px 1px 4px 0px rgba(0,0,0,0.15);
+}
+.shareList__link.icon-twitter{background:#55acee;}
+.shareList__link.icon-twitter:hover::before{color:#55acee;}
+
+.shareList__link.icon-facebook{background:#3B5998;}
+.shareList__link.icon-facebook:hover::before{color:#3B5998;}
+
+.shareList__link.icon-google-plus{background:#dd4b39;}
+.shareList__link.icon-google-plus:hover::before{color:#dd4b39;}
+
+.shareList__link.icon-hatebu{background:#008FDE;}
+.shareList__link.icon-hatebu:hover::before{color:#008FDE;}
+
+.shareList__link.icon-pocket{background:#EB4654;}
+.shareList__link.icon-pocket:hover::before{color:#EB4654;}
+
+.shareList__link.icon-rss{background:#ff9900;}
+.shareList__link.icon-rss:hover::before{color:#ff9900;}
+
+.shareList__link.icon-feedly{background:#6cc655;}
+.shareList__link.icon-feedly:hover::before{color:#6cc655;}
+
+.shareList__link.icon-pinterest{background:#cb2027;}
+.shareList__link.icon-pinterest:hover::before{color:#cb2027;}
+
+.shareList__link.icon-linkedin{background:#0e76a8;}
+.shareList__link.icon-linkedin:hover::before{color:#0e76a8;}
+
+.shareList__link.icon-line{background:#1dcd00;}
+.shareList__link.icon-line:hover::before{color:#1dcd00;}
+
+/* ラジオボタン選択型 */
+.toggle-button {color: #fff;background-color: #adadad;}
+.radio-toggle :checked + .toggle-button.unapproved {background-color: #ff9f15;}/* 未承認・済み */
+.radio-toggle :checked + .toggle-button.approved {background-color: #1da217;}/* 承認 */
+
+/****************** 検索部分 ******************/
+
+/* フリーワード検索（基本） */
+.search_container {
+	border: 2px solid var(--app-main-cr);
+	background: var(--app-main-cr-u);
+}
+.search_container input[type="submit"]{
+	background: var(--app-main-cr);
+	color: var(--app-main-txt);
+}
+
+/* 検索等のボタン */
+.SearchBT a {background: var(--app-main-cr);
+	color: var(--app-main-txt);
+}
+.SearchBT a.clear_btn {
+	background: var(--app-main-cr-u);
+	color: var(--app-main-cr);
+	border: 1px solid var(--app-main-brd);
+}
+
+/* 検索ボックス */
+.SearchArea {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+}
+
+/* タグ検索 */
+.tagSearchTi {background: var(--app-main-cr);color: var(--app-main-txt);}
+.tagSearchInn {background: var(--app-bg-cr);}
+.grad-btn {background: var(--app-main-cr);color: var(--app-main-txt);}
+.tagSearch ul.tagLink::before {
+	background: -webkit-linear-gradient(top, transparent 0%, var(--app-bg-cr) 100%);
+	background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%);
+}
+.ListBox .column .tagLink a,
+.tagSearch .tagLink a {
+    color: var(--app-main-txt-a);
+    background: var(--app-main-cr-a);border: 1px solid var(--app-main-brd-a);
+}
+/****************** 基本タイトルセット ******************/
+
+/* メインタイトル（主にカテゴリタイトルで使用） */
+.main_ti {
+	background: var(--app-main-cr-u);
+	border-bottom: 1px solid var(--app-main-brd-a);
+}
+.mtiBkBtArea {position: relative;margin: 0 auto;}
+.mtiBkBt {position: absolute;top: -25px;left: 0;}
+
+/* コンテンツタイトル（主にログイン等で使用） */
+h2.sys_ti,
+h3.sys_ti {
+	color: var(--main-txt);
+	border-top: 1px solid var(--app-main-brd-a);
+	border-bottom: 1px solid var(--app-main-brd-a);
+}
+/* コンテンツタイトル（主に購入画面等で使用） */
+h2.fotm_ti,
+h3.fotm_ti {border-bottom: 1px solid var(--app-main-brd-a);}
+
+/* 装飾タイトル（上下罫線） */
+.BrdHTi {
+	border-top: 2px solid #232323;
+	border-bottom: 2px solid #232323;
+}
+/* 装飾タイトル（下矢印） */
+h2.arwTi,
+h3.arwTi {background: url(../../core_sys/common/images/sys/ti_arw.png) center bottom no-repeat;}
+h2.arwTi span,
+h3.arwTi span {border-bottom: 3px solid #232323;}
+
+/* 装飾タイトル（左・下罫線） */
+h2.bdrTi,
+h3.bdrTi {
+	border-left: 5px solid #bababa;
+	border-bottom: 1px solid #bababa;
+}

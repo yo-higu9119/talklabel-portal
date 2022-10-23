@@ -1,0 +1,1242 @@
+@charset "utf-8";
+/***************************************************
+information
+  filename : tmp_parts.css;
+***************************************************/
+
+/****************** 幅指定 ******************/
+/* ベースレイアウト */
+#header,
+#headerSub,
+#footerSub,
+#footer {width: 100%;}
+.popup .mainOCln {width: 90%;}
+
+/* インナー */
+.header_innT,
+.header_innM,
+.header_innU,
+.header_innST,
+.footer_innT,
+.footer_innM,
+.footer_innU,
+.footer_innST {width: var(--app-main-width);} /* 基本幅 */
+
+/* ヘッダーサブ枠 */
+.headerSub_innT,
+.headerSub_innM {width: var(--app-main-width);} /* 基本幅 */
+.headerSub_innTL,
+.headerSub_innML {width: 49%;}
+.headerSub_innTR,
+.headerSub_innMR {width: 49%;}
+.headerSub_innTM,
+.headerSub_innMM {width: var(--app-main-width);} /* 基本幅 */
+
+/* フッターサブ枠 */
+.footerSub_innTL,
+.footerSub_innML {width: 49%;}
+.footerSub_innTR,
+.footerSub_innMR {width: 49%;}
+
+.footerSub_innT,
+.footerSub_innM,
+.footerSub_innTM,
+.footerSub_innMM {width: 100%;}
+
+/* 基本幅 */
+.contentsInn {width: 100%;}
+.mainInn {width: var(--app-main-width);}
+.mainInnS {width: var(--app-main-width-con);} /* コンテンツ基本幅 */
+
+/* 2カラム(幅広) */
+.mainClnD {width: var(--app-main-width-con);} /* コンテンツ基本幅 */
+.sideClnD {width: var(--app-main-width-side);} /* 2カラムサイド幅 */
+
+/* 2カラム(幅狭) */
+.mainClnS {width: var(--app-main-width-con-w);} /* コンテンツ基本幅(広) */
+.sideClnS {width: var(--app-main-width-side-w);} /* 2カラムサイド幅(広) */
+
+/* 2カラム(セパレート) */
+.hlfCln {width: 49%;}/* 2カラム(等幅) */
+
+/* ポップアップ */
+.popup_Box {width: 100%;}
+
+/* ヘッダー */
+#header .gnavi ul {width: var(--app-main-width);}
+
+/* コンテンツエリア */
+.contents_list {width: var(--app-main-width);}
+.contents_detaile {width: var(--app-main-width-con-w);}
+
+/* 記事横移動ナビ */
+.NBLink {width: 100%;}
+
+/* SNSシェア設置 */
+#SNSboxArea {width: 100%;}
+.shareList {width:400px;}
+
+/* コメント・掲示板要素 */
+.board_Box {width: var(--app-main-width);}
+.commentBox {width: 100%;}
+
+/* ログイン・新規会員登録要素 */
+.login_det_Box {width: 550px;}
+.newreg_det_Box {width: var(--app-main-width-con);}
+
+/* マイページ枠 */
+.mypage_Box {width: var(--app-main-width);}
+
+/* お問会わせ枠 */
+.contact_Box {width: 100%;}
+
+/* 購入枠 */
+.order_Box {width: var(--app-main-width-con-w);}
+
+/* カート枠 */
+.cart_Box {width: var(--app-main-width);}
+
+/****************** マージン・パディング指定 ******************/
+
+/* 2カラム(セパレート) */
+.mainClnD,
+.sideClnD {margin: 0 0 50px 0;}/* 2カラム(幅広) */
+.mainClnS,
+.sideClnS {margin: 0 0 50px 0;}/* 2カラム(幅狭) */
+
+/* 枠ボックス */
+.comBox {padding: 15px;}
+.comBoxInn {padding: 20px;}
+
+/* コンテンツエリア */
+.contents_list,
+.contents_detaile {padding: 50px 0;}
+
+/* ポップアップ */
+.popup_Box {padding: 20px;}
+
+/****************** フォントサイズ指定 ******************/
+
+#header .snavi a {font-size: 13px;}/* サブナビ */
+#header .gnavi a {font-size: 14px;font-weight: bold;}/* グローバルナビ */
+#header .gnavis a {font-size: 14px;font-weight: bold;}/* グローバルナビ(シンプル) */
+#footer .fnavi ul {font-size: 13px;}/* フッターナビ */
+.pagetop a {font-size: 10px;}/* ページトップボタン */
+.pan_link li {font-size: 13px;}/* パンくずリンク */
+.PageNum_link a {font-size:18px;font-weight: bold;}/* ページナンバーナビ */
+
+/****************** 個別指定 ******************/
+
+/*** 基本レイアウト ***/
+
+/* ベースレイアウト */
+#header {z-index: 1000;}
+
+/* ヘッダー */
+#header p.logo {padding: 20px 0 30px 0;max-width: 400px;}/* ヘッダーロゴ */
+#header .gnavis {float: left;margin-top: 8px;}
+#header .gnavi li {min-width: 150px;padding: 8px 0;}
+
+/* フッター */
+#footer .fnavi{float: left;margin: 0 auto;padding: 0 10px;}/* フッターナビ */
+#footer .copy {font-size: 11px;font-weight:normal;}/* コピーライト */
+
+/* アコーディオンメニュー */
+.widget li a {font-size: 14px;font-weight: bold;}
+
+/* カテゴリナビスライダー */
+.catenavSl ul {width: var(--app-main-width);}
+.catenavSl.WidW ul {width: 100%;}
+.catenavSl li {min-width: 150px;}
+.catenavSl li a {font-size: 16px;font-weight: bold;}
+
+/* カテゴリナビ横 */
+.catenavY ul {width: var(--app-main-width);}
+.catenavY.WidW ul {width: 100%;}
+.catenavY li {min-width: 150px;}
+.catenavY li a {font-size: 14px;font-weight: bold;}
+
+/* カテゴリナビ縦 */
+.catenav li a {font-size: 14px;font-weight: bold;}
+
+/* 表示形式選択 */
+.listIncSelect {width: var(--app-main-width);}
+.listIncSelect li a {
+	width: 120px;
+	padding: 10px 10px 10px 30px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.listIncSelect li.thumli a,
+.listIncSelect li.txtli a,
+.listIncSelect li.thumli.crt a,
+.listIncSelect li.thumli a:hover,
+.listIncSelect li.txtli.crt a,
+.listIncSelect li.txtli a:hover {background-size:20px 20px;}
+
+
+/****************** リスト ******************/
+
+/* リスト罫線 */
+.sideClnD .tpl-contents-block hr {margin: 5px auto 10px auto;}
+
+/* リスト画像 */
+.ListType1 .tpl-flexcolumn2 figure.image {height: 330px;}
+.ListType1 .tpl-flexcolumn3 figure.image {height: 250px;}
+.ListType1 .tpl-flexcolumn4 figure.image {height: 185px;}
+.ListType1 .tpl-flexcolumn5 figure.image {height: 145px;}
+.ListType2 .tpl-flexcolumn2 figure.image,
+.ListType4 .tpl-flexcolumn2 figure.image {height: 330px;}
+.ListType2 .tpl-flexcolumn3 figure.image,
+.ListType4 .tpl-flexcolumn3 figure.image {height: 230px;}
+.ListType2 .tpl-flexcolumn4 figure.image,
+.ListType4 .tpl-flexcolumn4 figure.image {height: 160px;}
+
+.mainClnD .ListType1 .tpl-flexcolumn2 figure.image {height: 240px;}
+.mainClnD .ListType1 .tpl-flexcolumn3 figure.image {height: 170px;}
+
+.mainClnD .tpl-flexcolumn2 figure.image {height: 240px;}
+.mainClnD .tpl-flexcolumn3 figure.image {height: 170px;}
+.mainClnD .tpl-flexcolumn4 figure.image {height: 120px;}
+
+.sideClnD .ListType1 .tpl-flexcolumn2 figure.image {height: 100px;}
+.sideClnD .ListType2 .tpl-flexcolumn2 figure.image,
+.sideClnD .ListType4 .tpl-flexcolumn2 figure.image {height: 100px;}
+.sideClnD .ListType2 .tpl-flexcolumn3 figure.image,
+.sideClnD .ListType4 .tpl-flexcolumn3 figure.image {height: 70px;}
+
+.ListBox .column .figureCap {font-size:14px;}/* ロールオーバー時テキスト */
+
+/* リストタイトル */
+.ListType1 .tpl-flexcolumn1 .column h3 {height: 90px;font-size: 35px;}
+.ListType1 .tpl-flexcolumn2 .column h3 {height: 65px;font-size: 25px;}
+.ListType1 .tpl-flexcolumn3 .column h3 {height: 65px;font-size: 25px;}
+.ListType1 .tpl-flexcolumn4 .column h3,
+.ListType1 .tpl-flexcolumn5 .column h3 {height: 55px;font-size: 20px;}
+
+.ListType2 .column h3,
+.ListType4 .column h3  {padding: 0 0 10px 0;}
+.ListType2 .tpl-flexcolumn2 .column h3,
+.ListType4 .tpl-flexcolumn2 .column h3 {font-size: 30px;}
+.ListType2 .tpl-flexcolumn3 .column h3,
+.ListType4 .tpl-flexcolumn3 .column h3 {font-size: 30px;}
+.ListType2 .tpl-flexcolumn4 .column h3,
+.ListType4 .tpl-flexcolumn4 .column h3 {font-size: 25px;}
+
+.sideClnD .ListType1 .tpl-flexcolumn2 .column h3 {height: 80px;font-size: 16px;}
+.sideClnD .ListType2 .column h3,
+.sideClnD .ListType4 .column h3 {font-size: 16px;}
+
+/* リストディスクリプション */
+.ListBox.ListType1 .column .distxt {
+	height: 75px;
+	font-size: 14px;
+}
+.ListBox.ListType1 .tpl-flexcolumn1 .distxt {
+	height: auto;
+	font-size: 18px;
+}
+.ListType2 .column .distxt,
+.ListType4 .column .distxt {font-size: 16px;}
+
+.sideClnD .ListType2 .column .distxt,
+.sideClnD .ListType4 .column .distxt {font-size: 13px;}
+
+/* リストビュー数等アイコン */
+.ListBox .column p.view,
+.ListBox .column p.like,
+.ListBox .column p.comment,
+.rank_date_c_area p.view,
+.rank_date_c_area p.like,
+.rank_date_c_area p.comment {font-size: 13px;font-weight: bold;}
+.ListBox .column p.cap,
+.rank_date_c_area p.cap {font-size: 12px;}
+
+/* リスト記事投稿者 */
+.ListBox .column .person .person_ph .name {font-size: 16px;}
+.ListBox .column .person .person_ph .work {font-size: 14px;}
+.ListBox .column .person .prof {padding: 5px 0;font-size: 12px;}
+
+.ListBox .column .person .person_ph figure {width: 10%;}
+.ListBox .column .person .person_ph .name_area {width: 90%;}
+.ListBox.ListType2 .tpl-flexcolumn2 .column .person .person_ph figure {width: 15%;}
+.ListBox.ListType2 .tpl-flexcolumn2 .column .person .person_ph .name_area {width: 85%;}
+.ListType2 .column .person .name {float: left;padding: 0;}
+.ListType2 .column .person .work {float: left;padding: 0 0 0 10px;}
+.ListType2 .column .person .prof {padding: 0;}
+
+.mainClnD .ListBox.ListType2 .tpl-flexcolumn2 .column .person .person_ph figure {width: 20%;}
+.mainClnD .ListBox.ListType2 .tpl-flexcolumn2 .column .person .person_ph .name_area {width: 80%;}
+.mainClnD .ListBox.ListType2 .tpl-flexcolumn2 .column .person .person_ph img {width:80px;}
+.mainClnD .ListBox.ListType2 .tpl-flexcolumn3 .column .person .person_ph figure {width: 15%;}
+.mainClnD .ListBox.ListType2 .tpl-flexcolumn3 .column .person .person_ph .name_area {width: 85%;}
+.mainClnD .ListBox.ListType2 .tpl-flexcolumn3 .column .person .person_ph img {width:80px;}
+.mainClnD .ListBox.ListType2 .tpl-flexcolumn4 .column .person .person_ph figure {width: 10%;}
+.mainClnD .ListBox.ListType2 .tpl-flexcolumn4 .column .person .person_ph .name_area {width: 90%;}
+.mainClnD .ListBox.ListType2 .tpl-flexcolumn4 .column .person .person_ph img {width:60px;}
+
+/* リストタグ・リストカテゴリアイコン・リストランキング */
+.ListBox .column .tagLink a,
+.ListBox .column ul.cateName span.cateIco,
+.ListBox.ListType3 ul.cateName span.cateIco,
+.ListBox .column .rankIco {font-size: 12px;}
+
+/* 1行リスト */
+.ListType3 dt.time {font-size: 12px;}
+.ListType3 dd.title_area p.title {font-size: 25px;}
+.ListType3 dd.title_area p.txt {font-size: 16px;}
+
+/* 個別項目一覧概要 */
+.ListSubhDet dl {font-size: 16px;font-weight: bold;}
+.ListSubhDet dl span.kinagakuTxt {font-size: 25px;font-weight: bold;padding: 0 5px;}
+.ListSubhDet dt {width: 25%;max-width: 100px;padding: 2px 0;}
+.ListSubhDet dd {width: 75%;padding: 2px 0 2px 20px;}
+
+/****************** コメント・掲示板要素 ******************/
+
+/* 掲示板枠 */
+.board_Box .mainClnS {border-right: 1px dotted var(--app-main-brd);padding: 20px 20px 0 0;}
+.board_Box .sideClnS {padding: 40px 0 0 0;}
+
+/* 記事コメント/掲示板共通 */
+.commentBox {
+	margin: 40px auto;
+	padding: 5px 15px;
+	border: 1px solid var(--app-main-brd);
+}
+
+/* トピックス新規登録フォーム */
+.NewTpiInput {
+	width: 90%;
+	margin: 0 auto;
+	padding: 20px;
+}
+/* コメント等共通設定 */
+.commentInput {
+	margin: 20px auto;
+	padding: 5px 10px;
+}
+.commentBT {
+	float: right;
+	width: 30%;
+	margin: 0;
+	padding: 0;
+}
+.commentList {padding: 10px 10px 20px 10px;}
+.commentSec {margin: 10px 0 0 30px;}
+.commentName {
+	font-size: 16px;
+	font-weight: normal;
+}
+.commentName span.commentNameS {
+	padding: 0 10px;
+	font-size: 13px;
+	font-weight: normal;
+}
+.commentTime {
+	font-size: 13px;
+	font-weight: normal;
+}
+.commentTxtRes {
+	font-size: 14px;
+	line-height: 1.8;
+}
+.commentTxt {
+	font-size: 16px;
+	line-height: 1.8;
+}
+.commentResArea {padding: 20px 5px 5px 5px;}
+
+/*** 掲示板トップ一覧 ***/
+.boardList {margin: 0 auto;padding: 10px 0 50px 0;}
+
+/* 掲示板(トピックス) */
+.boardListLink {
+	margin: 20px auto;
+	padding: 20px;
+}
+.boardListProf h2 {
+	padding: 10px 0 0 15px;
+	font-size: 20px;
+}
+.boardListDet {padding: 15px 0 0 0;}
+.boardListBt {float: left;padding: 15px 0 0 0;}
+.boardListName {float: right;text-align: right;}
+.boardTopicsTime {padding: 5px 0 0 0;font-size: 14px;}
+.boardTopicsName {padding: 0;font-size: 16px;}
+.boardNameS {padding: 0 0 0 20px;font-size: 13px;}
+.board_topicsBox h1 {font-size: 35px;line-height: 1.4em;}
+
+/****************** ログイン・新規会員登録要素 ******************/
+
+/* ログイン情報 */
+.member_info {
+	margin-top: 25px;
+	margin-right: 5px;
+}
+
+/* ログイン情報(プルダウン型) */
+.member_info_pd {
+	float: left;
+	margin-top: 25px;
+	margin-right: 5px;
+}
+.member_info_pd_menu li a{font-size: 14px;}
+
+.member_info .member_info_thumbnail,
+.member_info_pd .member_info_thumbnail {width: 35px;height: 35px;}
+.member_info_txt,
+.member_info_pd_txt {margin-left: 10px;line-height: 1.0;}
+.member_info_txt {width: 150px;}
+.member_info_txt .LoginName,
+.member_info_pd_txt .LoginName {font-size: 14px;line-height: 1.6;}
+.member_info_txt .LoginCourse,
+.member_info_pd_txt .LoginCourse {font-size: 11px;}
+
+/*FMCアイコン*/
+.fmcicon:hover #fmctxt {font-size: 13px;}
+
+/* プッシュ通知ボタン */
+ul.pwa_pushBt li a{font-size: 14px;}
+
+/****************** 入力フォーム箇所 ******************/
+
+/* フォーム縦並び */
+.InputFormT dt {font-size: 16px;font-weight:bold;}
+
+/* ステップ */
+.step_flow ul {width: var(--app-main-width);}
+.step_flow li {min-width: 150px;}
+.step_flow p.flow_ti {font-size: 18px;font-weight: bold;}
+.step_flow p.flow_com {font-size: 13px;}
+
+/*** 入力フォーム項目 ***/
+.InputForm dt {font-size: 16px;font-weight:bold;}
+.InputForm dt {float: left;width: 30%;}
+.InputForm dd {float: left;width: 70%;}
+
+/****************** マイページ要素 ******************/
+
+/* マイページ枠 */
+.mypage_Box .mainClnS {padding: 20px 20px 0 0;}
+.mypage_Box .sideClnS {padding: 40px 0 0 0;}
+
+/* マイページ枠 */
+.mypage_Box {padding: 0;}
+
+/* マイページ(基本) */
+.mypageDet dl {font-size: 14px;}
+.mypageDet dt {float:left;width:150px;}
+.mypageDet dd {float:left;}
+
+/* ファイルアップロード */
+.FileUpImg img {width:200px;}
+.FileUpName {font-size: 12px;}
+
+/* マイページ(プロフ写真エリア) */
+.myPhoto .photoArea {
+	width: 180px;
+	height: 180px;
+}
+.myPhoto p.myName {font-size: 16px;}
+
+/* マイページナビ */
+.mypagenav li {font-size: 14px;}
+
+/* マイページ各種購入表示 */
+.ordDetBox table {font-size: 14px;}
+
+.ordDetBox .ordDetTiArea {padding: 10px;}
+.ordDetBox .ordDetTi {
+	float: left;
+	width: 500px;
+	padding: 5px 0;
+	font-weight: bold;
+}
+.ordDetBox .ordDetTi dt {
+	float: left;
+	width: 200px;
+	font-size: 16px;
+	padding-top: 1px;
+}
+.ordDetBox .ordDetTi dd {
+	float: left;
+	font-size: 18px;
+}
+.ordDetBox .ordDetBt {float: right;}
+.ordDetBox .ordDetBt dd {
+	float: left;
+	width: 120px;
+	padding: 0 2px;
+}
+.ordDetBox th {width: 200px;}
+
+/****************** セミナー要素 ******************/
+
+/* セミナー詳細一覧 */
+.ListSubhDet span.SemIco {font-size:13px;}
+.ListSubhDet .sem_kinagaku dt {padding-top: 10px;}
+
+/* セミナー申込ボタン */
+.SemBTBox {
+	width: 90%;
+	margin: 20px auto;
+	padding: 15px;
+}
+.SemBTBox .btCart {margin: 20px auto;}
+
+/* セミナー基本詳細 */
+.SemDLBox {
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px 15px;
+	font-size:15px;
+}
+.SemDLBox dl {margin: 0 auto;padding: 0;}
+.SemDLBox dt {float:left;width:20%;margin: 0;padding: 15px;}
+.SemDLBox dd {float:left;width:80%;margin: 0;padding: 15px;}
+.SemDLBox .DetDlName dt,
+.SemDLBox .DetDlPay dt {padding-top: 20px;}
+.SemDLBox .DetDlName dd {font-size: 20px;font-weight: bold;}
+.SemDLBox .DetDlPay span.kinagakuTxt {font-size: 20px;font-weight: bold;padding: 0 5px 0 0;}
+
+/* セミナー自由詳細 */
+.SemFLBox {
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px 15px;
+	font-size:15px;
+}
+.SemFLBox dl {margin: 0 auto;padding: 0;}
+.SemFLBox dt {float:left;width:20%;margin: 0;padding: 15px;}
+.SemFLBox dd {float:left;width:80%;margin: 0;padding: 15px;}
+
+/* セミナーURL詳細 */
+.SemURLBox {
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px 15px;
+	font-size:15px;
+}
+.SemURLBox dl {margin: 0 auto;padding: 0;}
+.SemURLBox dt {float:left;width:20%;margin: 0;padding: 15px;}
+.SemURLBox dd {float:left;width:80%;margin: 0;padding: 15px;}
+
+/****************** 商品要素 ******************/
+
+/* 商品一覧概要 */
+.ListSubhDet .prd_kinagaku dt {padding-top: 5px;}
+
+/* 商品カートボタン */
+.PrdBTBox {
+	width: 90%;
+	margin: 20px auto;
+	padding: 15px;
+}
+.PrdBTBox .btCart {margin: 20px auto;}
+.PrdNumBox {
+	width: 100%;
+	margin: 5px auto;
+	padding: 5px;
+}
+.PrdNumBox .PrdNumTi,
+.PrdNumBox .PrdNumTxt {padding: 10px 5px;font-size: 14px;}
+.PrdNumBox .PrdNum {padding: 0;}
+.PrdNumBox .PrdNumCtrBt {padding-top: 8px;}
+.PrdNumBox .PrdNumUpdBt {padding: 6px 2px;}
+.PrdNumBox .PrdNumOpTi {max-width :150px;padding: 5px;font-size: 14px;text-align: right;}
+
+.PrdCartOpArea {margin: 0 auto;padding: 5px;}
+.PrdCartOpCrt {margin: 0 auto;padding: 0;}
+.PrdCartOpNum {padding: 0 5px;}
+.PrdCartOpBt {padding: 10px 0;}
+.PrdCartOpKBt {padding: 5px 0;}
+
+/* 商品基本詳細 */
+.PrdDLBox {
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px 15px;
+	font-size:15px;
+}
+.PrdDLBox dl {margin: 0 auto;padding: 0;}
+.PrdDLBox dt {float:left;width:20%;margin: 0;padding: 10px 15px;}
+.PrdDLBox dd {float:left;width:80%;margin: 0;padding: 10px 15px;}
+.PrdDLBox .DetDlName dt,
+.PrdDLBox .DetDlPay dt {padding-top: 15px;}
+.PrdDLBox .DetDlName dd {font-size: 20px;font-weight: bold;}
+.PrdDLBox .DetDlPay span.kinagakuTxt {font-size: 20px;font-weight: bold;padding: 0 5px 0 0;}
+
+/* 商品自由詳細 */
+.PrdFLBox {
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px 15px;
+	font-size:15px;
+}
+.PrdFLBox dl {margin: 0 auto;padding: 0;}
+.PrdFLBox dt {float:left;width:20%;margin: 0;padding: 15px;}
+.PrdFLBox dd {float:left;width:80%;margin: 0;padding: 15px;}
+
+/* 商品URL詳細 */
+.PrdURLBox {
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px 15px;
+	font-size:15px;
+}
+.PrdURLBox dl {margin: 0 auto;padding: 0;}
+.PrdURLBox dt {float:left;width:20%;margin: 0;padding: 15px;}
+.PrdURLBox dd {float:left;width:80%;margin: 0;padding: 15px;}
+
+/****************** カート要素 ******************/
+
+/* 一括オーダー */
+.cart_Box {display: -webkit-flex;display: flex;}
+.PrdCartList {display: block;width: 65%;}
+.PrdCartInt {width: 34%;}
+#cartList {position: -webkit-sticky;position: sticky;top: 70px;}
+
+/* 商品カート(商品一覧) */
+.PrdCartListBox {
+	margin: 20px auto;
+	padding: 15px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+	background: var(--app-main-cr-u);
+}
+
+.PrdCartPh {width: 15%;margin: 0;padding: 0;}
+.PrdCartDet {width: 50%;margin: 0 10px;padding: 0;}
+.PrdCartBt {width: 30%;margin: 0;padding: 0;}
+
+.PrdCartDetName {float: left;width: 240px;margin: 0;padding: 0;}
+.PrdCartDetAmt {
+	float: right;
+	font-size: 14px;
+	width: 100px;
+	margin: 0;
+	text-align: right;
+}
+.PrdCartPh .PrdCartPhDet {
+	width: 100%;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid var(--app-main-brd);
+}
+.PrdCartPh img {width: 100%;}
+.PrdCartPh .PrdCartPhDet {
+	height: 70px;
+	overflow: hidden;
+	background: #eee;
+}
+.PrdCartDet {font-weight: bold;}
+.PrdCrtNo {font-size: 12px;}
+.PrdCrtName {font-size: 16px;}
+
+.PrdCartBt {padding-top: 15px;}
+.PrdCartDetAmt {padding-top: 18px;}
+.PrdCartDetAmt span.kingakuTxt {font-size: 20px;padding: 0 5px;}
+
+/* 商品カート(カート) */
+.PrdCrtSNo {font-size: 12px;}
+.PrdCrtSName {font-size: 16px;}
+.PrdCartSAmt,
+.PrdCartSAmtOp {font-size: 14px;text-align: right;font-weight: bold;}
+.PrdCartSAmt span.kingakuTxt,
+.PrdCartSAmtOp span.kingakuTxt {font-size: 20px;padding: 0 5px;}
+
+/* 商品購入に関するボタン一式 */
+.PrdCrtEdBt a {
+	float: left;
+	width: 48%;
+	margin: 0 2px;
+	padding: 5px 0px;
+	font-size:14px;
+	font-weight: bold;
+}
+.PrdNumUpdBt a {
+	width: 60px;
+	padding: 5px 0px;
+	font-size:14px;
+}
+.PrdNumCtrBt button {font-size: 14px;}
+
+/* カート内合計金額 */
+.PrdCartTotalBox td.PrdCartTotalTiSd {font-size: 14px;}/* タイトル */
+.PrdCartTotalBox td.PrdCartTotalpay {font-size: 25px;}/* 合計金額 */
+.PrdCartTotalBox td.PrdCartTotalpay span {font-size: 16px;}/* 合計金額小 */
+.PrdCartTotalBox td.PrdCartTotalTiS,
+.PrdCartTotalBox td.PrdCartTotalSpay {font-size: 14px;}/* 消費税 */
+.PrdCartTotalBox td.PrdCartTotalpayS {font-size: 16px;}/* 配送料 */
+
+/* 住所選択 */
+.addArea .addAreaInn {
+	width: 48.5%;
+	height: 200px;
+	margin: 5px;
+}
+.addArea .addAreaInn .addDetail {padding: 5px;font-size: 14px;}
+.addArea .addAreaInn .addName {padding: 0 0 5px 0;font-size: 18px;}
+.addArea .addAreaInn .addPost {padding: 5px 0 0 0;}
+.addArea .addAreaInn .addAddition {width: 100%;height: 150px;margin: 0;padding: 10px;}
+.addArea .addAreaInn .addAddition p.addAdditionTi {padding-top: 15px;text-align: center;font-size: 16px;font-weight: bold;}
+.addArea .addAreaInn .addAddition p.addAdditionIco {padding-top: 15px;text-align: center;font-size: 40px;font-weight: bold;}
+
+.addArea .addAreaInn .radio-toggle.addSelect {
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+}
+.addArea .addBTArea {
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+}
+.addBT {float: left;}
+.addBT a {
+	width: 100px;
+	margin: 0 5px 0 0;
+	padding: 5px 0px;
+	font-size:14px;
+}
+.addArea .addAreaDef {background: #f3f3f3;}
+
+/****************** 最終確認要素 ******************/
+
+/* 申込・購入フォーム最終確認 */
+.FChkBox {
+	width: 95%;
+	margin: 20px auto;
+	padding: 10px 15px;
+	font-size:15px;
+}
+.FChkBox dl {margin: 0 auto;padding: 0;}
+.FChkBox dt {float:left;width:30%;margin: 0;padding: 10px 15px;}
+.FChkBox dd {float:left;width:70%;margin: 0;padding: 10px 15px;}
+
+/****************** スライドショー ******************/
+
+/* スライドショー(画面サイズ最大) */
+.slideshow_area {height: 646px;}
+.slide_single_box .slick-next::before {width: 2200px;}
+
+/* スライドショー(シングル) ボタン要素 */
+.slide_single_box .slick-prev {left: 20px;}
+.slide_single_box .slick-next {right: 40px;}
+.slide_single_box .slick-prev::before,
+.slide_single_box .slick-next::before {font-size: 40px;color: #999;}
+
+/* スライドショー(1画像スライド表示) */
+.slideDf_area {margin: 20px auto 0;padding: 0;}
+.slideDfInn {padding: 0 20px;}
+.slideDfInn h2 {
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 28px;
+	line-height: 1.2em;
+	overflow: hidden;
+}
+.slideDfInn p.cap {
+	width: 100%
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1.2em;
+	text-align: right;
+	border-top: 1px solid var(--app-main-brd);
+}
+
+/* スライドショー(3画像スライド複数表示) */
+.slideDfN_area {margin: 0 auto 65px auto;padding: 0;}
+.slideDfN_box .slick-dots li button:before {color: #fff;}
+.slideDfN_box li.slick-active button:before {color: #fff;}
+
+/****************** 個別パーツ ******************/
+
+/*** 個人メニュー表示エリア ***/
+/* 共通 */
+.memberArea {padding-top: 5px;}
+.mnavi {float:right;padding-bottom: 5px;}
+.mnavi li {list-style: none;}
+.mnavi a {
+	display: block;
+	padding: 5px 0;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 2px;
+}
+.mnavi a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+.member_info, .member_info_pd {margin-top: 15px;}
+
+/* アドレス指定 */
+address p.logo {max-width: 200px;}
+address p.name {font-size: 18px;padding: 5px 0;}
+address p.add {font-size: 12px;padding: 5px 0;line-height: 1.4em;}
+address p.tel {font-size: 15px;}
+address p.mail {font-size: 12px;}
+address p.txt {font-size: 12px;}
+address p.cap {font-size: 12px;padding: 5px 0;}
+
+address p.contactBt a {
+	font-size: 14px;
+	color: var(--app-main-txt);
+	text-decoration: none;
+	border: 1px solid var(--app-main-brd-u);
+}
+
+/* カテゴリ表記設置 */
+ul.DetcateName span.DetcateIco {font-size: 12px;}
+
+/* いいねボタン設置 */
+.siteShare a,
+.siteShare span,
+.siteFavorite a,
+.siteFavorite span,
+.BrdSiteShare span,
+.BrdSiteRes span,
+.BrdSiteAcs span,
+.siteShareNo {font-size: 13px;}
+
+/* 記事投稿者 */
+.authorBox .authorDetail p.authorDetTi {font-size: 18px;}
+.authorBox .authorDetail p.authorDetName {font-size: 20px;line-height: 1.2em;}
+.authorBox .authorDetail p.authorDetCorp {font-size: 16px;}
+.authorBox .authorDetail p.authorDetProf {font-size: 14px;line-height: 1.4em;}
+
+/* テーブル要素共通 */
+.TableBox table {font-size: 14px;}
+
+/* ラジオボタン選択ボタン化 */
+.toggle-button {font-size: 14px;}
+
+/* タイトル箇所設置戻るボタン */
+.mtiBkBt a {font-size: 14px;margin: 0;padding: 5px 20px;}
+
+/****************** 検索部分 ******************/
+
+/* フリーワード検索（基本） */
+.search_container {font-size: 14px;}
+#headerSub .search_container {float: right;width: 300px;}
+.mainClnD .search_container,
+.mainClnS .search_container {width: 100%;}
+
+/* 検索等のボタン */
+.SearchBT a,
+.SearchBT span,
+.DlPushBT a,
+.DlPushBT span {font-size: 14px;margin: 5px 10px 0 10px;}
+
+/* 検索ボックス */
+.SearchArea {
+	width: 100%;
+	margin: 20px auto;
+	padding: 10px 15px;
+	font-size:15px;
+}
+.SearchBox {float: right;}
+.SearchBox .SearchForm {float: left;margin: 0 5px;}
+.SearchBox .SearchBT {float: left;}
+.SearchBox .SearchBT a {margin: 5px 5px 0 5px;}
+
+/* タグ検索 */
+.tagSearch {margin: 40px auto;padding: 0 0 30px 0;}
+.tagSearchTi {font-size: 16;line-height: 1.2em;}
+.grad-btn {font-size: 14px;}
+.tagSearch .tagLink a {font-size: 12px;}
+
+/****************** 基本タイトルセット ******************/
+
+/* メインタイトル（主にカテゴリタイトルで使用） */
+.main_ti .bsc_ti {font-size: 22px;font-weight: normal;line-height: 1.2em;text-align: center;}
+.mtiBkBtArea {width: var(--app-main-width);margin: 0 auto;}
+
+/* コンテンツタイトル（コンテンツ・セミナー・商品のメインタイトル） */
+h1.det_ti {font-size: 40px;line-height: 1.4em;}
+
+/* コンテンツタイトル（主にログイン等で使用） */
+h2.sys_ti,
+h3.sys_ti {font-size: 20px;line-height: 1.2em;}
+
+/* コンテンツタイトル（主に購入画面等で使用） */
+h2.fotm_ti,
+h3.fotm_ti {font-size: 20px;line-height: 1.2em;}
+
+/* 装飾タイトル（上下罫線） */
+.BrdHTi {
+	margin: 40px auto;
+	padding: 30px 0;
+	text-align: center;
+	font-size: 35px;
+}
+/* 装飾タイトル（下矢印） */
+h2.arwTi,
+h3.arwTi {
+	margin: 60px auto 10px auto;
+	padding: 0 0 37px 0;
+	text-align: center;
+	font-size: 35px;
+}
+h2.arwTi span,
+h3.arwTi span {padding: 10px 0;}
+
+/* 装飾タイトル（左・下罫線） */
+h2.bdrTi,
+h3.bdrTi {
+	margin: 0 auto 10px auto;
+	padding: 10px;
+	text-align: left;
+	font-size: 20px;
+}
+/****************** デザインブロック(テンプレート) ******************/
+
+/* 2分割基本 */
+.tblckArea {width: 100%;margin: 0 auto;}
+.tblckBox {width: 50%;margin: 0;}
+.lyot01 {float: left;background: #333;}
+.lyot02 {float: right;background: #666;}
+.tblckInn {padding: 30px;}
+.lyot01 .tblckInn {float: right;}
+.lyot02 .tblckInn {float: left;}
+h2.tblckTi {font-size: 30px;color: #fff;line-height: 1.0em;}
+.tblckTxt {padding: 20px 0;font-size: 16px;color: #fff;line-height: 1.8em;}
+.lyot01 h2.tblckTi,
+.lyot01 .tblckTxt {text-align: right;}
+.lyot02 h2.tblckTi,
+.lyot02 .tblckTxt {text-align: left;}
+.tblckBt {width: 100%;margin: 0 auto;}
+.tblckBt a {
+	width: 70%;
+	display: block;
+	margin: 20px auto 0 auto;
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #848484;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.tblckBt a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+
+/* タイトルテキスト基本 */
+.TiTxtArea {margin: 0 auto;padding: 0;}
+.TiTxtArea p.mainTxt {
+	padding: 0 0 60px 0;
+	font-size: 18px;
+	line-height: 1.8em;
+}
+p.mainCap {
+	padding: 20px 0 60px 0;
+	text-align: center;
+	font-size: 18px;
+	line-height: 1.6em;
+}
+/* 3分割基本 */
+.phblckArea {margin: 0 auto;padding: 0;font-size:0;}
+.phblckBox {
+	width: 33.33%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+.phblckImg {width: 100%;height: 345px;overflow: hidden;}
+.phblckTxt {width: 100%;height: 345px;padding: 30px;background: #eee;overflow: hidden;}
+.phblckImg img {width: 100%;}
+.phblckTi {
+	font-size: 30px;
+	text-align: center;
+}
+.phblckTxtInn {
+	padding: 30px 0;
+	font-size: 16px;
+	line-height: 1.6em;
+}
+/* 4分割基本 */
+.phblck4Area {margin: 0 auto;padding: 0;font-size:0;}
+.phblck4Box {margin: 0 auto;padding: 0;}
+.phblck4Box .phblck4Img {
+	width: 25%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+.phblck4Img {width: 100%;height: 278px;overflow: hidden;}
+.phblck4Img img {width: 100%;}
+.phblck4Txt {width: 100%;padding: 30px 10px 10px 10px;background: #eee;}
+.phblck4Ti {
+	font-size: 40px;
+	text-align: center;
+}
+.phblck4TxtInn {
+	padding: 50px 0;
+	font-size: 18px;
+	line-height: 1.6em;
+	text-align: center;
+}
+/* コンテンツ一覧基本 */
+.ConLiArea,
+.SemLiArea,
+.PrdLiArea {margin: 0 auto;padding: 0;}
+
+/* コンテンツ一覧左右基本 */
+.ConLiClArea {
+	margin: 0 auto;
+	padding: 30px 0;
+	background: #e8e8e8;
+}
+.ConLiClAreaInn {width: var(--app-main-width);margin: 0 auto;}
+.ConLiCllckBox {
+	width: 49%;
+	padding: 20px;
+	background: #fff;
+}
+.ConLiCllckBox .ListBox {
+	height: 500px;
+	margin-top: 20px;
+	padding: 20px;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	overflow: auto;
+}
+/* 写真左右・テキスト左右基本 */
+.lrblckArea {
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+.lrblckArea:before {
+	top: 0;
+	width: 50%;
+	height: 100%;
+	content: '';
+	position: absolute;
+}
+.lrblckArea.lyotL:before {right: 50%;}
+.lrblckArea.lyotR:before {left: 50%;}
+.lrblckBox {
+	top: 0;
+	width: 50%;
+	height: 100%;
+	content: '';
+	position: absolute;
+}
+.lyotL .lrblckBox {left: 50%;}
+.lyotR .lrblckBox {right: 50%;}
+.lrblckInn {width: 600px;padding: 60px 40px;}
+.lyotR .lrblckInn {float: right;}
+h2.lrblckTi {font-size: 32px;line-height: 1.0em;}
+.lrblckTxt {padding: 20px 0;font-size: 18px;line-height: 1.8em;}
+.lrblckBt a {
+	width: 70%;
+	display: block;
+	margin: 20px auto 0 auto;
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #848484;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.lrblckBt a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+
+.lrblckArea.lrblckImg01:before {background: #333;}
+.lrblckArea.lrblckImg02:before {background: #666;}
+
+/* 背景・矢印基本 */
+.TiTxtArwArea {
+	margin: 0 auto 60px auto;
+	padding: 20px 0 30px 0;
+	background: var(--app-main-cr);
+	color: var(--app-main-txt);
+	text-align: center;
+	position: relative;
+}
+.TiTxtArwArea h2.TiTxtArwTi {
+	font-size: 35px;
+	text-align: center;
+	padding: 20px 0;
+}
+.TiTxtArwArea p.TiTxtArwTxt {padding: 20px 0;font-size: 18px;line-height: 1.6em;}
+.SvgImg {
+	position: absolute;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	bottom: -75px;
+}
+.SvgImg .SvgImgWaku {
+	width: 73px;
+	height: 73px;
+	border-radius: 50%;
+	background: #fff;
+}
+.SvgImg .IcoSvg {padding-top: 3px;width: 70px;height: 70px;fill: var(--app-main-cr);}
+
+/* 写真背景基本 */
+.bkblckArea {
+	margin: 0 auto;
+	padding-top: 300px;
+	height: 490px;
+	background: #666;
+}
+.bkblckTxt {
+	margin: 0 auto;
+	padding: 30px;
+	background:rgba(0,20,48,0.8);
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.bkblckTxtInn {font-size: 18px;line-height: 1.6em;color: #fff;}
+
+/* SNSリンク基本 */
+.snsblckArea {
+	margin: 0 auto;
+	padding: 10px 0;
+	background: var(--app-main-cr);
+	text-align: center;
+}
+ul.snsblckAreaInn {
+	list-style: none;
+	width: 260px;
+	margin-left: auto;
+	margin-right: auto;
+}
+ul.snsblckAreaInn li {float: left;}
+.snsblckAreaInn a {
+	color:#fff;
+	width: 55px;
+	height: 55px;
+	font-size: 25px;
+	margin: 0 5px;
+	padding: 17px 10px 10px 10px;
+	display: block;
+	border-radius: 50%;
+	background: #999;
+}
+.snsblckAreaInn a:hover {filter: alpha(opacity=65);-moz-opacity:0.75;opacity:0.75;text-decoration: none;}
+
+/* 地図エリア基本 */
+.accsArea {padding: 10px 0;background: #f9f9f9;}
+.accsArea p.mainCap {
+	padding: 10px 0;
+	text-align: center;
+	font-size: 20px;
+	line-height: 1.6em;
+}
+.google_map{
+	position:relative;
+	width:100%;
+	height:0;
+	margin: 30px auto;
+	padding-top:25%;
+}
+.google_map iframe{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+	/* インナー */
+	.header_innT,
+	.header_innM,
+	.header_innU,
+	.header_innST,
+	.footer_innT,
+	.footer_innM,
+	.footer_innU,
+	.footer_innST {width: var(--app-main-width-ipad);} /* 基本幅 */
+
+	.header_innU,
+	.footer_innU {width: 100%;}
+
+	.footer_innML {width: 40%;}
+	.footer_innMR {width: 60%;}
+
+	/* ヘッダーサブ枠 */
+	.headerSub_innT,
+	.headerSub_innM {width: var(--app-main-width-ipad);} /* 基本幅 */
+	.headerSub_innTM,
+	.headerSub_innMM {width: var(--app-main-width-ipad);} /* 基本幅 */
+
+	/* 基本幅 */
+	.mainInn {width: var(--app-main-width-ipad);}
+
+	/* 2カラム(幅広) */
+	.mainClnD {width: var(--app-main-width-con-ipad);} /* コンテンツ基本幅 */
+	.sideClnD {width: var(--app-main-width-side-ipad);} /* 2カラムサイド幅 */
+
+	/* 2カラム(幅狭) */
+	.mainClnS {width: var(--app-main-width-con-w-ipad);} /* コンテンツ基本幅(広) */
+	.sideClnS {width: var(--app-main-width-side-w-ipad);} /* 2カラムサイド幅(広) */
+
+	/* ヘッダー */
+	#header .gnavi ul {width: var(--app-main-width-ipad);}
+
+	/* パンくずリンク */
+	.pan_link ul {width: var(--app-main-width-ipad);}
+
+	/* 記事横移動ナビ */
+	.NBLink {width: var(--app-main-width-con-ipad);}
+
+	/* コンテンツエリア */
+	.contents_list {width: var(--app-main-width-ipad);}
+	.contents_detaile {width: var(--app-main-width-con-w-ipad);}
+
+	/* SNSシェア設置 */
+	#SNSboxArea {width: var(--app-main-width-con-w-ipad);}
+
+	/* コメント・掲示板要素 */
+	.board_Box {width: var(--app-main-width-ipad);}
+	.commentBox {width: var(--app-main-width-con-w-ipad);}
+
+	/* ログイン・新規会員登録要素 */
+	.newreg_det_Box {width: var(--app-main-width-con-ipad);}
+
+	/* マイページ枠 */
+	.mypage_Box {width: var(--app-main-width-ipad);}
+
+	/* お問会わせ枠 */
+	.contact_Box {width: var(--app-main-width-con-w-ipad);}
+
+	/* 購入枠 */
+	.order_Box {width: var(--app-main-width-con-w-ipad);}
+
+	/* カート枠 */
+	.cart_Box {width: var(--app-main-width-ipad);}
+
+	/* ヘッダー */
+	#header p.logo {padding: 20px 0 30px 0;max-width: 350px;}/* ヘッダーロゴ */
+
+	/* カテゴリナビスライダー */
+	.catenavSl ul {width: var(--app-main-width-ipad);}
+	.catenavSl li {min-width: 140px;}
+
+	/* カテゴリナビ横 */
+	.catenavY ul {width: var(--app-main-width-ipad);}
+	.catenavY li {min-width: 140px;}
+
+	/* 表示形式選択 */
+	.listIncSelect {width: var(--app-main-width-ipad);}
+
+	/* ステップ */
+	.step_flow ul {width: var(--app-main-width-ipad);}
+
+}

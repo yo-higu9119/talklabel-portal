@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* デフォルト */
+.tab-box {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  filter: drop-shadow(0 3px 30px #F5F5F5);
+  padding: 5px 3px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+@media screen and (max-width:768px) {
+  .tab-box {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.tab-box .tab {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #333333;
+  border-radius: 10px;
+}
+.tab-box .tab p {
+  font-weight: bold;
+  text-align: center;
+}
+.tab-box .tab-active {
+  background-color: #E1F8F7;
+}
+
+.tab_content {
+  display: none;
+}
+
+.tab_show {
+  display: block;
+}
+
+.tab {
+  width: 90%;
+}
+@media screen and (max-width:768px) {
+  .tab {
+    width: 48%;
+  }
+}/*# sourceMappingURL=tab.css.map */
